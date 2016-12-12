@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="author" content="Fabian Affolter" />
+    <link rel="stylesheet" href="remark-ha.css" type="text/css" media="screen" charset="utf-8">
+    <title>Home Assistant</title>
+</head>
+
+<body onload="
+var slideshow = remark.create(
+{ratio: '16:9',
+navigation: {scroll: true, touch: true, click: false},
+countIncrementalSlides: false
+}
+);
+
+/*
+// every 8 seconds (change to your desired interval), fire the helper function
+setInterval(function () {carousel(slideshow)}, 8000);
+
+function carousel(varObject) {
+    var slideCount = varObject.getSlideCount()-1;
+    var currentSlide = varObject.getCurrentSlideIndex();
+    // if the slideshow is on the last slide, go back to the first slide; if not, call gotoNextSlide();
+    if (currentSlide == slideCount) {
+        varObject.gotoFirstSlide();
+    }
+    else { varObject.gotoNextSlide(); }
+};*/
+">
+
+<textarea id="source">
+
+class: center, middle
+
+![Home Assistant](images/ha-logo.png)
+
+# Home Assistant
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Internet of things
+
+.left-column[
+- Lampen
+- Schalter
+- Thermostat
+- Wasserkocher
+- Zahnbürste
+- Kameras
+- Staubsauger
+]
+
+.right-column[
+- Waschmaschine
+- Bewässerung
+- Schlösser
+- Temperatur
+- Türen
+- Tierfütterung
+- ...
+]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Protokolle & Busse
+
+- SOHO-Einsatz
+  - Bluetooth, Bluetooth LE, IEEE 802.x, Z-Wave, X10, KNX, ZigBee, IR, LoRA, SCS, Universal Powerline Bus, Insteon, EnOcean, C-BUS, etc.
+
+--
+- Industrieller Einsatz
+  - CAN, Profibus, Modbus, Interbus, EtherCAT, ControlNet, SafetyBUS, BitBus, etc.
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Home Assistant
+
+- Python 3
+- MIT
+- 2.5 Jahre alt (Erster Commit: 17. September 2013)
+- Validierung mit PEP8 / PyFlakes / PyLint
+- 94 % Test coverage (ohne Integrationen)
+
+---
+
+background-image: url(images/components.png)
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Verfügbare Implementierungen
+
+- MQTT, Insteon, Modbus, RFXtrx, Z-Wave, ZigBee, SCSGate, KNX
+
+--
+- Arduino, Raspberry PI GPIO
+
+--
+- Webservices
+
+.footnote[Component overview: https://home-assistant.io/components/#all]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Installation
+
+```bash
+$ pip3 install homeassistant
+```
+--
+
+## Alternativen
+
+- Docker
+- Vagrant
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Setup/Konfiguration
+
+```yaml
+homeassistant:
+  latitude: 46.94
+  longitude: 7.45
+  elevation: 558.4
+  unit_system: metric
+  time_zone: Europe/Zurich
+  name: Wohnung
+sun:
+sensor:
+  - platform: cpuspeed
+    name: CPU
+switch:
+  - platform: mystrom
+    host: 10.100.0.104
+    name: MyStrom Switch
+```
+---
+
+.header[![](images/ha-header.svg)]
+
+# Start
+
+```bash
+$ hass
+$ hass --config path/to/config
+```
+
+--
+### Demo mode
+
+```bash
+$ hass --demo-mode
+```
+--
+### Frontend öffnen
+
+```bash
+$ hass --open-ui
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Autostart
+
+- systemd
+- upstart
+- macOS
+
+---
+
+class: middle
+.header[![](images/ha-header.svg)]
+
+- **Dokumentation**: <br/>
+  [https://home-assistant.io/](https://home-assistant.io/)
+- **Community**: <br/>
+  [https://community.home-assistant.io/](https://community.home-assistant.io/)
+- **Chat**: <br/>
+  [https://gitter.im/home-assistant/home-assistant](https://gitter.im/home-assistant/home-assistant)
+
+---
+
+class: center, middle
+
+<img src="images/ha-logo.png" alt="Home Assistant Logo" style="width:400px;">
+
+# [https://home-assistant.io](https://home-assistant.io.org)
+
+</textarea>
+    <script type="text/javascript" src="remark-latest.min.js"></script>
+</body>
+</html>
