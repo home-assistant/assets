@@ -1,0 +1,15 @@
+# Project description
+
+Sometimes it's needed to have a little more than a slug line about Home Assistant. 
+
+Home Assistant is a home automation platform running on Python 3. The goal of Home Assistant is to be able to track and control all devices at home and offer a platform for automating control.
+
+Home Assistant is a home automation platform running on Python 3. The goal of Home Assistant is to be able to track and control all devices at home and offer a platform for automating control.
+
+## German
+
+Home Assistant ist eine Open source Heim-Automatisierungsplatform, welche in Python geschrieben ist und ohne Cloud auskommt. Unterschiedlichste Geräte lassen sich kontrollieren und automatisieren. Die Heizung, die Beleuchtung, Mediaplayer oder automatische Rollläden im Haus oder der Wohnung können nach Bedarf oder anderen Gegebenheiten gesteuert werden. Das heisst, dass beispielsweise die Heizung eingeschaltet wird, wenn der Arbeitsplatz am Abend verlassen wird oder die Wohnzimmer-Lampe sich einschaltet und die Rollläden geschlossen werden, wenn es draussen dunkel wird und jemand zu Hause ist.
+Es besteht eine breite Unterstützung für Geräte, wie Hubs, Kamera, HiFi-Komponenten und Fernseher, mechanische Schlösser, Tore und Türen, Kalender oder Staubsauger, welche sich im Handel kaufen lassen. Unter den fast 500 Integrationen sind jedoch auch Web-Dienste für Wetter, Börsen-Informationen oder des öffentlichen Verkehrs, Sprachsteuerung und Text-to-speech vorhanden. Anwender haben die Wahl von unterschiedlichsten Typen von Benachrichtigungen, welche sie über Ereignisse und Zustände in ihrem Heim informieren. 
+Die Automatisierung liefert die Funktionalität, um auf Änderungen mit Aktionen zu reagieren. Digitale, numerische und zeit- oder standort-basierende Auslöser stehen zur Verfügung, so dass unter Berücksichtigung von optionalen Konditionen sich die vorhandenen Geräte ein-, ausschalten oder regeln lassen. Die manuelle Steuerung kann mit Hilfe eines modernen Web-Interface bewerkstelligt werden. 
+Home Assistant ist mittlerweile etwas mehr als drei Jahre alt und steht unter der MIT-Lizenz. Die stetig wachsende Community sorgt für eine konstante Weiterentwicklung, neue Integrationen und biete schnelle Hilfe bei Installations- und Konfigurationsproblemen.
+
