@@ -33,7 +33,7 @@ Die manuelle Steuerung kann mit Hilfe eines modernen Web-Interface bewerk-
 stelligt werden.
 
 Home Assistant ist mittlerweile etwas mehr als drei Jahre alt und steht unter
-der MIT-Lizenz. 
+der Apache 2.0-Lizenz. 
 
 Workshop-Details
 ----------------
