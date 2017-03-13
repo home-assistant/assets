@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name="description" content="Home Assistant - Setup" />
+    <meta name="author" content="Fabian Affolter" />
+    <link rel="stylesheet" href="remark-ha.css" type="text/css" media="screen" charset="utf-8">
+    <title>Home Assistant - Setup</title>
+</head>
+
+<body onload="
+var slideshow = remark.create(
+{ratio: '16:9',
+navigation: {scroll: true, touch: true, click: false},
+countIncrementalSlides: false
+}
+);
+
+/*
+// every 8 seconds (change to your desired interval), fire the helper function
+setInterval(function () {carousel(slideshow)}, 8000);
+
+function carousel(varObject) {
+    var slideCount = varObject.getSlideCount()-1;
+    var currentSlide = varObject.getCurrentSlideIndex();
+    // if the slideshow is on the last slide, go back to the first slide; if not, call gotoNextSlide();
+    if (currentSlide == slideCount) {
+        varObject.gotoFirstSlide();
+    }
+    else { varObject.gotoNextSlide(); }
+};*/
+">
+
+<textarea id="source">
+
+class: center, middle
+
+![Home Assistant](images/ha-logo.png)
+
+# Home Assistant - Setup
+### Awaken your home
+---
+
+.header[![](images/ha-header.svg)]
+
+# Betriebssysteme
+
+- Linux
+- Windows
+- macOS
+- *BSD
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Vorbereitungen
+
+- Virtual environment !
+- Kompiler, Bibliotheken
+- Python
+- etc.
+
+---
+
+# Optionen
+
+<img src="images/installation.png" alt="Home Assistant Installation" style="width:400px;">
+
+.footnote[Installation overview: https://home-assistant.io/docs/installation/]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Installation
+
+```bash
+$ sudo pip3 install homeassistant
+```
+--
+
+## Alternativen
+
+- [HASSbian](https://home-assistant.io/getting-started/installation-raspberry-pi-image/) (Image)
+- [Raspberry Pi All-In-One Installer](https://home-assistant.io/getting-started/installation-raspberry-pi-all-in-one/)
+- [Ansible Role](https://github.com/home-assistant/home-assistant-ansible)
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Unterstützung (Zukunft)
+
+- C.H.I.P (Image)
+- Pakete in Fedora, ArchLinux und Alpine Linux
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Erzeugen von `configuration.yaml`
+
+- erster Start von Home Assistant
+- manuell
+- Script
+
+```bash
+$ hass --script ensure_config
+```
+
+.footnote[Scripts: https://home-assistant.io/docs/tools/scripts/#existance-of-configuration]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Initiale Konfiguration
+
+```yaml
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 50.8333
+  longitude: 12.9167
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 300
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Berlin
+
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Format `configuration.yaml`
+
+- YAML
+- Einrückungen
+- `key-value`-Paare (Format `key: value`)
+- Jede Collection startet mit einem `-`
+- Wenn doppelte Einträge, dann wird letzter genutzt
+- Linter
+
+.footnote[YAML: https://home-assistant.io/docs/configuration/yaml/]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Start
+
+```bash
+$ hass
+$ hass --config path/to/config
+```
+
+--
+### Demo mode
+
+```bash
+$ hass --demo-mode
+```
+--
+### Frontend öffnen
+
+```bash
+$ hass --open-ui
+```
+---
+
+.header[![](images/ha-header.svg)]
+
+# Speicherort
+
+| Betriebssystem | Pfad |
+|:-------------- | ----:|
+| macOS | `~/.homeassistant` |
+| Linux | `~/.homeassistant` |
+| Windows | `%APPDATA%/.homeassistant` |
+
+.footnote[Configuring Home Assistant: https://home-assistant.io/getting-started/configuration/]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# "Dinge" hinzufügen
+
+.left-column[
+```yaml
+sensor:
+  - platform: mqtt
+    state_topic: "home/2/temp"
+    name: "MQTT Sensor 1"
+  - platform: mqtt
+    state_topic: "home/1/temp"
+    name: "MQTT Sensor 2"
+  - platform: moon
+switch:
+  - platform: vera
+  - platform: mystrom
+    host: 10.100.0.104
+    name: MyStrom Switch
+```
+]
+
+.right-column[
+```yaml
+sensor 1:
+  platform: mqtt
+  state_topic: "home/1/temp"
+  name: "MQTT Sensor 1"
+sensor 2:
+  platform: mqtt
+  state_topic: "home/2/temp"
+  name: "MQTT Sensor 2"
+camera 1:
+  platform: generic
+camera 2:
+  platform: mjpeg
+```
+]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Aufteilen der Konfiguration
+
+- Auslagerung von Teilen
+- Kombinationen möglich
+
+```yaml
+sensor: !include sensors.yaml
+```
+
+in `sensors.yaml`
+
+```yaml
+- platform: vera
+- platform: mystrom
+  host: 10.100.0.104
+  name: MyStrom Switch
+```
+
+.footnote[Splitting configuration: https://home-assistant.io/docs/configuration/splitting_configuration/]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Organisation `packages`
+
+In `configuration.yaml`
+
+```yaml
+homeassistant:
+  [...]
+  packages: 
+    pack_1: !include workshop.yaml
+```
+
+in `workshop.yaml`
+
+```yaml
+switch:
+  - platform: rest
+  - platform: mystrom
+sensor:
+  - platform: random
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Auslagern von Secrets
+
+- keine API keys, Token und Passwörter
+- zentraler Speicherort
+- Unterstützung für Keyring
+
+.footnote[Storing secrets: https://home-assistant.io/docs/configuration/secrets/]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Auslagern von Secrets (2)
+
+`secrets.yaml` im Konfigurationsverzeichnis
+
+```yaml
+do_api: 2adf28f0e90f13f309d12376cd
+```
+
+in `configuration.yaml`
+
+```yaml
+digital_ocean:
+  access_token: !secret do_api
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Remote access
+
+- IoT ist unsicher
+- Zugang von aussen
+- Tor/VPN
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Gruppieren
+
+- Zusammenfassung von Elementen
+- `default_view:` für `HOME`
+- `view: yes` für Tab
+
+```yaml
+group:
+  default_view:
+    view: yes
+    entities:
+      - group.kitchen
+      - group.awesome_people
+      - group.climate
+  random:
+    name: Random
+    entities:
+      - sensor.random1
+      - sensor.random2
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Anpassen
+
+```yaml
+customize:
+  # Only the 'entity_id' is required.  All other options are optional.
+  - entity_id: sensor.living_room_motion
+    hidden: true
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Datenbank
+
+- Standard ist SQLite
+- SQLAlchemy als Object Relational Mapper (ORM)
+- Unterstützung für MySQL, mariaDB und Postgresql
+
+```yaml
+recorder:
+```
+- `purge_days: 5`
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Web server
+
+- inklusive (`aiohttp`)
+- liefert Frontend
+
+```yaml
+http:
+  api_password: YOUR_PASSWORD
+```
+
+.footnote[HTTP component: https://home-assistant.io/components/http/]
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Web server (2)
+
+- Support für SSL/TLS
+
+```yaml
+http:
+  ssl_certificate: /etc/letsencrypt/test/hass.example.com/fullchain.pem
+  ssl_key: /etc/letsencrypt/test/hass.example.com/privkey.pem
+```
+
+- `server_host`, `server_port`
+- `trusted_networks`
+- `ip_ban_enabled`, `login_attempts_threshold`
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Testen der Konfiguration
+
+```bash
+$ hass --script check_config
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Autostart
+
+- systemd
+- upstart
+- macOS
+
+---
+
+class: middle
+.header[![](images/ha-header.svg)]
+
+- **Dokumentation**: <br/>
+  [https://home-assistant.io/](https://home-assistant.io/)
+- **Community**: <br/>
+  [https://community.home-assistant.io/](https://community.home-assistant.io/)
+- **Chat**: <br/>
+  [https://gitter.im/home-assistant/home-assistant](https://gitter.im/home-assistant/home-assistant)
+
+---
+
+class: center, middle
+
+<img src="images/ha-logo.png" alt="Home Assistant Logo" style="width:400px;">
+
+# [https://home-assistant.io](https://home-assistant.io.org)
+
+</textarea>
+    <script type="text/javascript" src="remark-latest.min.js"></script>
+</body>
+</html>
