@@ -4,8 +4,6 @@ Sometimes it's needed to have a little more than a slug line about Home Assistan
 
 Home Assistant is a home automation platform running on Python 3. The goal of Home Assistant is to be able to track and control all devices at home and offer a platform for automating control.
 
-Home Assistant is a home automation platform running on Python 3. The goal of Home Assistant is to be able to track and control all devices at home and offer a platform for automating control.
-
 ## German
 
 Home Assistant ist eine Open source Heim-Automatisierungsplatform, welche in Python geschrieben ist und ohne Cloud auskommt. Unterschiedlichste Geräte lassen sich kontrollieren und automatisieren. Die Heizung, die Beleuchtung, Mediaplayer oder automatische Rollläden im Haus oder der Wohnung können nach Bedarf oder anderen Gegebenheiten gesteuert werden. Das heisst, dass beispielsweise die Heizung eingeschaltet wird, wenn der Arbeitsplatz am Abend verlassen wird oder die Wohnzimmer-Lampe sich einschaltet und die Rollläden geschlossen werden, wenn es draussen dunkel wird und jemand zu Hause ist.
