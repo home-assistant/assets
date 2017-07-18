@@ -1,0 +1,14 @@
+Fedora and Home Assistant
+
+Talk (30 min)
+Presenter: Fabian Affolter
+Co-presenter: Marcelo Moreira de Mello
+
+With Home Assistant is a Python 3 home automation system available, that has a lot in common with Fedora. The super short release cycle of Home Assistant ensures that users can profit instantly from new features. Sometimes they are the first ones who get support for a brand-new smart thing. The fast growing community of friends is trying to help when something doesn't work like it should. 
+
+As freedom is a major issue in the whole smart home and IoT world, think of proprietary protocols, undocumented options, pre-compiled software, and alike, will this topic not be covered in this talk.
+
+Fedora is fast but Home Assistant is faster...this results in a couple of problems which makes it hard for Fedora to become the premier platform or base for a Home Automation Hub with Home Assistant. But Fedora loves Python and Home Assistant is written in Python.
+
+The talk will shed some light on the internas of Home Assistant. How it works and how it can be useful? But I will also talk about the module handling and the current issues with Fedora.
+
