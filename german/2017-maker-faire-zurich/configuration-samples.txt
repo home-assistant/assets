@@ -1,0 +1,32 @@
+sensor:
+  - platform: command_line
+    name: Temperature
+    command: curl http://localhost:5000/api/temperature
+    value_template: {{ value_json.value }}
+
+  - platform: rest
+    name: Humidity
+    resource: http://localhost:5000/api/humidity
+    value_template: {{ value_json.value }}
+
+mqtt:
+  broker: 127.0.0.1
+
+
+  - platform: mqtt
+    state_topic: "ambient-box/temperature"
+    name: "MQTT Temperatur"
+  - platform: mqtt
+    state_topic: "ambient-box/humidity"
+    name: "MQTT Luftfeuchtigkeit"
+
+automation:
+  - alias: Check sensor value and show notification
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.mqtt_temperatur
+      above: 20
+    action:
+      service: persistent_notification.create
+      data:
+        message: "Es ist sehr heiss."

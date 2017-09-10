@@ -3,10 +3,10 @@
 <head>
     <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
     <meta name=viewport content="width=device-width,initial-scale=1">
-    <meta name="description" content="Home Assistant - Setup" />
+    <meta name="description" content="Home Assistant - Einführung" />
     <meta name="author" content="Fabian Affolter" />
     <link rel="stylesheet" href="remark-ha.css" type="text/css" media="screen" charset="utf-8">
-    <title>Home Assistant - Maker Faire Zurück 2017</title>
+    <title>Home Assistant - Maker Faire Zürich 2017</title>
 </head>
 
 <body onload="
@@ -39,9 +39,9 @@ class: center, middle
 ![Home Assistant](images/ha-logo.png)
 
 # Home Assistant
-### Awaken your home
+### Fabian Affolter
 
-Maker Faire Zurück 2017
+Maker Faire Zürich 2017
 
 ---
 
@@ -59,9 +59,9 @@ Maker Faire Zurück 2017
 
 - B. Sc. CS BUAS, B. Sc. ME BUAS
 - [affolter engineering](http://affolter-engineering.ch/)
-- Home Assistant Core Developer
+- Home Assistant Developer
 - Fedora Security Lab/Fedora Security Lab Test bench
-- Fedora Package Maintainer (ca. 190 packages)
+- Fedora/EPEL Package Maintainer (ca. 190 packages)
 - Alpine Linux Contributor
 
 ---
@@ -75,6 +75,7 @@ Maker Faire Zurück 2017
 - **Jabber**: fab@swissjabber.org
 - **Web**: [http://fabian-affolter.ch](http://fabian-affolter.ch)
 - **Discord**: fabaff
+- **Twitter**: @fabaff
 
 ---
 
@@ -106,19 +107,6 @@ Maker Faire Zurück 2017
 
 .header[![](images/ha-header.svg)]
 
-# Internet of things - Problematik
-
-- Abhängigkeit von Hersteller
-- Insel-Lösungen
-- Cloud
-- Mobile App
-- Preis
-- etc.
-
----
-
-.header[![](images/ha-header.svg)]
-
 # Protokolle & Busse
 
 - SOHO-Einsatz
@@ -132,10 +120,35 @@ Maker Faire Zurück 2017
 
 .header[![](images/ha-header.svg)]
 
-# Wieso?
+# Problematik
 
+- Abhängigkeit von Hersteller
+- Insel-Lösungen
+- Cloud
+- Mobile App
+- Preis
+- etc.
 
+---
 
+.header[![](images/ha-header.svg)]
+
+# Zusammenfassung
+
+- Viele Hersteller
+- Viele Protokolle
+- Wenig Interoperabilität
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Do it yourself
+
+- Arduino
+- ESP8266, ESP32, und andere
+- GPIO
+  - Raspberry Pi, Cubieboard, Beaglebone Black
 
 ---
 
@@ -144,12 +157,12 @@ Maker Faire Zurück 2017
 # Home Assistant
 
 - Python 3
-- über 750 Integrationen
+- über 800 Integrationen
 - Apache 2.0 (früher MIT)
 - fast 4 Jahre alt (Erster Commit: 17. September 2013)
 - Validierung mit PEP8 / PyFlakes / PyLint
 - 94 % Test coverage (ohne Integrationen)
-- Automatische Abhängigkeitsverwaltung
+- Release-Zyklus: alle zwei Wochen
 
 ---
 
@@ -161,10 +174,10 @@ background-image: url(images/components.png)
 
 # Verfügbare Implementierungen
 
-- MQTT, Insteon, Modbus, RFXtrx, Z-Wave, ZigBee, SCSGate, KNX, etc.
+- MQTT, Insteon, Modbus, RFXtrx, Z-Wave, ZigBee, SCSGate, KNX
 
 --
-- Arduino, Raspberry PI GPIO, Cubieboard, Beaglebone Black
+- RESTful API, `command_line`-*
 
 --
 - Webservices
@@ -177,7 +190,7 @@ background-image: url(images/components.png)
 
 ## Wo?
 
-<img src="images/location.png" alt="Home Assistant Location" style="width:700px;">
+<img src="images/location.png" alt="Home Assistant Location" style="width:900px;">
 
 ---
 
@@ -196,12 +209,14 @@ background-image: url(images/components.png)
 
 # Vorbereitungen
 
+- Python
 - Virtual environment !
 - Kompiler, Bibliotheken
-- Python
-- etc.
+- ...abhängig von Betriebssystem
 
 ---
+
+.header[![](images/ha-header.svg)]
 
 # Optionen
 
@@ -216,7 +231,7 @@ background-image: url(images/components.png)
 # Installation
 
 ```bash
-$ sudo pip3 install homeassistant
+$ pip3 install homeassistant
 ```
 --
 
@@ -224,8 +239,8 @@ $ sudo pip3 install homeassistant
 
 - [Hass.io](https://home-assistant.io/hassio/) (All-in-one-Lösung)
 - [HASSbian](https://home-assistant.io/getting-started/installation-raspberry-pi-image/) (Image)
-- [Raspberry Pi All-In-One Installer](https://home-assistant.io/getting-started/installation-raspberry-pi-all-in-one/)
-- [Ansible Role](https://github.com/home-assistant/home-assistant-ansible)
+- [Raspberry Pi All-In-One Installer](https://home-assistant.io/getting-started/installation-raspberry-pi-all-in-one/) (veraltet)
+- [Ansible Role](https://github.com/home-assistant/home-assistant-ansible) (forgeschritten)
 
 ---
 
@@ -247,20 +262,29 @@ $ hass --script ensure_config
 
 .header[![](images/ha-header.svg)]
 
+# Exkurs: Speicherort
+
+| Betriebssystem | Pfad |
+|:-------------- | ----:|
+| macOS | `~/.homeassistant` |
+| Linux | `~/.homeassistant` |
+| Windows | `%APPDATA%/.homeassistant` |
+
+.footnote[Configuring Home Assistant: https://home-assistant.io/docs/configuration/]
+
+---
+
+.header[![](images/ha-header.svg)]
+
 # Initiale Konfiguration
 
 ```yaml
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
   latitude: 50.8333
   longitude: 12.9167
-  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 300
-  # metric for Metric, imperial for Imperial
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Berlin
 
 # Show links to resources in log and frontend
@@ -274,14 +298,18 @@ frontend:
 
 .header[![](images/ha-header.svg)]
 
-# Format `configuration.yaml`
+# Exkurs: Format `configuration.yaml`
 
 - YAML
 - Einrückungen
 - `key-value`-Paare (Format `key: value`)
-- Jede Collection startet mit einem `-`
+- Jede Collection / Liste startet mit einem `-`
 - Wenn doppelte Einträge, dann wird letzter genutzt
 - Linter
+
+```bash
+$ hass --script check_config
+```
 
 .footnote[YAML: https://home-assistant.io/docs/configuration/yaml/]
 
@@ -308,28 +336,15 @@ $ hass --demo-mode
 ```bash
 $ hass --open-ui
 ```
----
-
-.header[![](images/ha-header.svg)]
-
-# Speicherort
-
-| Betriebssystem | Pfad |
-|:-------------- | ----:|
-| macOS | `~/.homeassistant` |
-| Linux | `~/.homeassistant` |
-| Windows | `%APPDATA%/.homeassistant` |
-
-.footnote[Configuring Home Assistant: https://home-assistant.io/getting-started/configuration/]
 
 ---
 
 .header[![](images/ha-header.svg)]
 
-# Measuring Box
+# Ambient Sensor Kit
 
-- ESP32, Sensor, Breadboard, Kabel und Gehäuse
-- Basic, Outdoor, Deluxe
+- ESP32, Sensor, Breadboard, und Kabel
+- Simple, Outdoor, Deluxe
 - Webserver-, ThingSpeak-, RESTful API-, und MQTT-Unterstützung
 - Programmierbar durch Arduino IDE oder Micropython
 
@@ -337,19 +352,26 @@ $ hass --open-ui
 
 .header[![](images/ha-header.svg)]
 
-# Measuring Box
+# Ambient Sensor Kit
 
-<img src="images/me-box.png" alt="Measuring Box Basic Edition" style="width:400px;">
+<img src="images/ambient-box.png" alt="Ambient Sensor Deluxe Edition" style="width:700px;">
 
 ---
 
 .header[![](images/ha-header.svg)]
 
-# Measuring Box - RESTful API
+# Ambient Sensor Kit - Web interface
+
+<center><img src="images/webinterface.png" alt="Ambient Sensor Web interface" style="width:600px;"></center>
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Ambient Sensor Kit - RESTful API
 
 - Endpunkte
   - Alle Werte: `/api/states`
-  - Gerät-Status: `/api/device`
   - Temperatur: `/api/temperature`
   - Luftfeuchtigkeit: `/api/humidity`
   - Luftdruck: `/api/pressure`
@@ -360,14 +382,18 @@ $ hass --open-ui
 
 .header[![](images/ha-header.svg)]
 
-# Measuring Box - RESTful API
+# Ambient Sensor Kit - RESTful API
 
 ```bash
-$ curl http://192.168.0.209/api/states
+$ curl http://192.168.0.209/api/temperature
 {
-
+  "value": 21
 }
 ```
+
+Oder mit einem Browser
+
+<img src="images/rest-web.png" alt="Ambient Sensor Rest API over Web" style="width:500px;">
 
 ---
 
@@ -378,9 +404,9 @@ $ curl http://192.168.0.209/api/states
 ```yaml
 sensor:
   - platform: command_line
-    name: MEBox Temperature
+    name: Temperature
     command: curl http://192.168.0.209/api/temperature
-    value_template: {{ value_json.state }}
+    value_template: '{{ value_json.value }}'
 ```
 
 --
@@ -390,9 +416,9 @@ sensor:
 ```yaml
 sensor:
   - platform: rest
-    name: MEBox Humidity
+    name: Humidity
     resource: http://192.168.0.209:5000/api/humidity
-    value_template: {{ value_json.state }}
+    value_template: '{{ value_json.value }}'
 ```
 
 .footnote[Details: https://home-assistant.io/components/sensor.command_line/ & https://home-assistant.io/components/sensor.rest/]
@@ -401,12 +427,15 @@ sensor:
 
 .header[![](images/ha-header.svg)]
 
-# Pull vs. Push
+# Poll vs. Push
 
 - Abholen
 - Liefern lassen
 
 --
+
+Konkret heisst dies:
+
 - REST API -> poll
 - MQTT -> push
 
@@ -445,15 +474,18 @@ mqtt:
 # MQTT Sensoren hinzufügen
 
 - Ein Topic pro Sensor
+  - `ambient-box/humidity`
+  - `ambient-box/temperature`
+  - und andere
 - Für Umrechnungen `template`-Sensor 
 
 ```yaml
 sensor:
   - platform: mqtt
-    state_topic: "home/temperatur"
+    state_topic: "ambient-box/temperatur"
     name: "MQTT Temperatur"
   - platform: mqtt
-    state_topic: "home/humidity"
+    state_topic: "ambient-box/humidity"
     name: "MQTT Luftfeuchtigkeit"
 ```
 
@@ -464,15 +496,66 @@ sensor:
 # MQTT Switch hinzufügen
 
 - Ein Topic für Befehl
-- Ein Topic für Status 
+  - `ambient-box/led/set`
+- Ein Topic für Status
+  - `ambient-box/led`
 
 ```yaml
-sensor:
+switch:
   - platform: mqtt
-    command_topic: "home/led/set"
-    state_topic: "home/led"
+    command_topic: "ambient-box/led/set"
+    state_topic: "ambient-box/led"
     name: "MQTT LED"
 ```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Automation
+
+```text
+Wenn ich nach Hause kommen          - Auslöser (trigger)
+und es nach Sonnenuntergang ist     - Bedingung (condition)
+schalte das Licht im Wohnzimmer an  - Aktion (action)
+```
+
+---
+
+.header[![](images/ha-header.svg)]
+
+- **Auslöser**
+  - Event, welches die Regel ausführt
+  - Status-Änderungen (z. B. `not_home` zu `home`)
+- **Bedingungen**
+  - optionaler Test
+  - Limitierung der Ausführung
+  - wird gegen den aktuellen Zustand getestest
+- **Aktion**
+  - Ausführung, wenn Regel is getriggert und Conditionen erfüllt
+  - Service
+
+---
+
+.header[![](images/ha-header.svg)]
+
+# Automation-Beispiel
+
+```yaml
+automation:
+  - alias: Check sensor value and show notification
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.mqtt_temperatur
+      above: 20
+    action:
+      service: persistent_notification.create
+      data:
+        message: "Es ist sehr heiss."
+
+```
+
+.footnote[Details: https://home-assistant.io/docs/automation/]
 
 ---
 
@@ -484,7 +567,7 @@ class: middle
 - **Community**: <br/>
   [https://community.home-assistant.io/](https://community.home-assistant.io/)
 - **Chat**: <br/>
-  [https://gitter.im/home-assistant/home-assistant](https://gitter.im/home-assistant/home-assistant)
+  [https://discord.gg/c5DvZ4e](https://discord.gg/c5DvZ4e)
 
 ---
 
@@ -507,6 +590,8 @@ class: center, middle
 .header[![](images/ha-header.svg)]
 
 # Andere "Dinge" hinzufügen
+
+- Mögliche Stile:
 
 .left-column[
 ```yaml
@@ -598,7 +683,7 @@ sensor:
 
 # Auslagern von Secrets
 
-- keine API keys, Token und Passwörter
+- keine API keys, Token und Passwörter in `configuration.yaml`
 - zentraler Speicherort
 - Unterstützung für Keyring
 
@@ -734,42 +819,13 @@ $ hass --script check_config
 
 .header[![](images/ha-header.svg)]
 
-# Autostart
-
-- systemd
-- upstart
-- macOS
-
----
-
-.header[![](images/ha-header.svg)]
-
-# Schnittstellen
+# Schnittstellen für Anbindungen
 
 - Websocket API
 - RESTful API
 - Python API
 - Server-sent events
 
----
-
-class: middle
-.header[![](images/ha-header.svg)]
-
-- **Dokumentation**: <br/>
-  [https://home-assistant.io/](https://home-assistant.io/)
-- **Community**: <br/>
-  [https://community.home-assistant.io/](https://community.home-assistant.io/)
-- **Chat**: <br/>
-  [https://gitter.im/home-assistant/home-assistant](https://gitter.im/home-assistant/home-assistant)
-
----
-
-class: center, middle
-
-<img src="images/ha-logo.png" alt="Home Assistant Logo" style="width:400px;">
-
-# [https://home-assistant.io](https://home-assistant.io.org)
 
 </textarea>
     <script type="text/javascript" src="remark-latest.min.js"></script>
