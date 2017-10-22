@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Home Assistant (public version): Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			@import url("https://s3.amazonaws.com/static.slid.es/fonts/overpass2/overpass2.css");
+.reveal {
+  
+
+  /*fix icon inversion*/
+
+}
+.reveal svg,
+.reveal text,
+.reveal tspan,
+.reveal svg text {
+  font-family: "Overpass 2", Overpass, sans-serif !important;
+  color: currentcolor;
+  fill: currentcolor;
+}
+.reveal .sl-block {
+  color: #354045;
+  fill: currentcolor;
+}
+.reveal .sl-block svg {
+  color: currentcolor;
+}
+.reveal .has-dark-background,
+.reveal .has-dark-background > .sl-block {
+  color: white;
+  fill: currentcolor;
+}
+.reveal section > .sl-block .redhat-logo .logotext {
+  fill: #000000;
+}
+.reveal .has-dark-background > .sl-block .redhat-logo .logotext {
+  fill: #ffffff;
+}
+.reveal .has-dark-background > .sl-block[data-block-type="image"] {
+  color: #ffffff;
+}
+.reveal [fill="none"] {
+  fill: none !important;
+}
+.reveal [fill="#a30000"] {
+  fill: #aa0000 !important;
+}
+.reveal [fill="#cc2029"],
+.reveal [fill="#cb2027"],
+.reveal [fill="#c00"] {
+  fill: #cc0000 !important;
+}
+.reveal [fill="#fff"] {
+  fill: #ffffff !important;
+}
+.reveal [fill="#6d6e70"] {
+  fill: #6d6e70 !important;
+}
+.reveal [fill="#231f20"] {
+  fill: currentcolor !important;
+}
+.reveal [fill="#efab1f"] {
+  fill: #efab1f !important;
+}
+.reveal [fill="#92d400"] {
+  fill: #92d400 !important;
+}
+.reveal .has-dark-background [fill="#6d6e70"] {
+  fill: #266272 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #555555 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #333333 !important;
+}
+.reveal .has-dark-background [stroke="#231f20"] {
+  stroke: currentcolor;
+}
+.reveal [data-inline-svg="true"] img {
+  display: none;
+}
+
+		</style>
+
+		<!-- Theme CSS -->
+		<style id="theme-css-output" type="text/css">
+			@import url(//overpassmonotest-30e2.kxcdn.com/overpass-mono.css);
+.reveal {
+  
+
+  /*
+.sl-block[data-block-type="snippet"],
+.sl-block[data-block-type="image"] 
+{
+text,
+tspan,
+polygon,
+path,
+rect,
+ellipse {
+  fill: currentcolor;
+}
+}
+*/
+
+  /*slide-default*/
+
+  /*Custom Ordered Lists */
+
+  /*helpers*/
+
+  /*fixing left aligned text*/
+
+  /*h1,h2,h3,h4,h5,h6{&::first-letter{margin-left:-.09em;}}*/
+
+  /*icon absolute brute-fix*/
+
+  /*
+.present .icon.stroked path.long{ stroke-width: 2px ;
+-webkit-animation: icon-animation-long 3.5s 1.5s 1;
+-moz-animation:    icon-animation-long 3.5s 1.5s 1;
+animation:         icon-animation-long 3.5s 1.5s 1;
+}*/
+
+  /*
+.present .icon.stroked path.short{
+-webkit-animation: icon-animation-short 3.5s 1.5s 1;
+-moz-animation:    icon-animation-short 3.5s 1.5s 1;
+animation:         icon-animation-short 3.5s 1.5s 1;
+}*/
+
+  /*controls logic*/
+
+  /*animated logos with complex svg segments*/
+
+  /*transitions*/
+
+  /*logos svg files that contain inverted path alternates */
+
+  /* call to action */
+
+  /* tables in snippets.... the devil */
+
+  /* tables in text */
+
+  /*testimonial snippet */
+
+  /*for inverting images*/
+
+  /**/
+
+  /*code blocks*/
+
+  /* round line arrows */
+
+  /*fix icon inversion*/
+
+  /*body:hover .corner svg{transform: translate(30%, 30%)}*/
+
+}
+.reveal.reveal[role="application"] > .backgrounds > .slide-background:not(.stack):first-child,
+.reveal.reveal[role="application"] > .backgrounds > .stack:first-child > .slide-background:first-child,
+.reveal.reveal[role="application"] .slides > .pdf-page:not(.stack):first-child .slide-background,
+.reveal.reveal[role="application"] .slides > .stack:first-child > .pdf-page:first-child .slide-background {
+  background-color: #900;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: linear-gradient(-45deg, #8e0000 20%, #820000 20%, #990000 85%, #890000 85%);
+  min-height: 100vh;
+}
+.reveal.reveal[role="application"] > .backgrounds > .slide-background:not(.stack):first-child.has-light-background,
+.reveal.reveal[role="application"] > .backgrounds > .stack:first-child > .slide-background:first-child.has-light-background,
+.reveal.reveal[role="application"] .slides > .pdf-page:not(.stack):first-child .slide-background.has-light-background,
+.reveal.reveal[role="application"] .slides > .stack:first-child > .pdf-page:first-child .slide-background.has-light-background {
+  background-image: none;
+}
+.reveal.reveal .slides > .section:first-child,
+.reveal.reveal[role="application"] > .slides > .section:first-child .sl-block {
+  color: #fff;
+}
+.reveal .name {
+  white-space: nowrap;
+}
+.reveal .reveal,
+.reveal .sl-block,
+.reveal .sl-block-content,
+.reveal .sl-block-content div,
+.reveal .sl-block-content p,
+.reveal .sl-block-content h1,
+.reveal .sl-block-content h2,
+.reveal .sl-block-content h3,
+.reveal .sl-block-content h4 {
+  font-family: "Overpass 2", overpass, "Hiragino Kaku Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+.reveal .future .sl-block-content,
+.reveal .past .sl-block-content {
+  transition: none !important;
+}
+.reveal section,
+.reveal.reveal .has-dark-background,
+.reveal section.background-shade-dark {
+  color: #fff;
+}
+.reveal.reveal .has-dark-background a {
+  color: #eee;
+}
+.reveal.reveal .has-dark-background a:hover {
+  color: #fff;
+}
+.reveal .backgrounds {
+  background: #f3f4f4;
+}
+.reveal .slide-background {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.reveal .slide-background.has-light-background {
+  /*background-image: url(//s3.amazonaws.com/media-p.slid.es/uploads/team-32/images/1297460/standard-background.svg);*/
+
+}
+.reveal .backgrounds .paint-it-red {
+  background-color: #c00 !important;
+  -moz-background-blend-mode: multiply;
+  -webkit-background-blend-mode: multiply;
+  -ms-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.reveal .paint-it-red {
+  color: #fff;
+}
+.reveal .has-dark-background .icon.stroked path,
+.reveal section.background-shade-dark .icon.stroked path,
+.reveal section.light-foreground .icon.stroked path {
+  stroke: #fff !important;
+}
+.reveal .has-dark-background .redhat-product-logotype path,
+.reveal section.background-shade-dark .redhat-product-logotype path,
+.reveal section.light-foreground .redhat-product-logotype path {
+  fill: #ffffff;
+}
+.reveal .has-dark-background text.logotext,
+.reveal section.background-shade-dark text.logotext,
+.reveal section.light-foreground text.logotext,
+.reveal .has-dark-background .logotext text,
+.reveal section.background-shade-dark .logotext text,
+.reveal section.light-foreground .logotext text,
+.reveal .has-dark-background path.logotext,
+.reveal section.background-shade-dark path.logotext,
+.reveal section.light-foreground path.logotext,
+.reveal .has-dark-background path.logotype,
+.reveal section.background-shade-dark path.logotype,
+.reveal section.light-foreground path.logotype,
+.reveal .has-dark-background .logotext path,
+.reveal section.background-shade-dark .logotext path,
+.reveal section.light-foreground .logotext path {
+  fill: #fff !important;
+}
+.reveal .has-dark-background .closing-logo .logotext,
+.reveal section.background-shade-dark .closing-logo .logotext,
+.reveal section.light-foreground .closing-logo .logotext,
+.reveal .has-dark-background .redhat-logo .logotext,
+.reveal section.background-shade-dark .redhat-logo .logotext,
+.reveal section.light-foreground .redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .icon.stroked path {
+  stroke: currentcolor;
+}
+.reveal .has-light-background .redhat-logo .logotext {
+  fill: #000000 !important;
+}
+.reveal .sl-block-content ol li {
+  position: relative;
+  padding-bottom: .5em;
+}
+.reveal .sl-block-content ol li > p:first-child {
+  margin: 0;
+}
+.reveal .sl-block-content ol > li::before {
+  margin-left: -2.5em;
+}
+.reveal .sl-block-content > ol > li:before {
+  float: left;
+  text-align: center;
+  box-shadow: inset 0 0 0 .1em;
+  border-radius: 50%;
+}
+.reveal .sl-block-content ol {
+  counter-reset: section;
+  list-style-type: none;
+  margin: 0 0 0 2.5em;
+  display: block;
+}
+.reveal .sl-block-content ol ol {
+  margin-top: .5em;
+}
+.reveal .sl-block-content ol > li:before {
+  font-weight: 400;
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  line-height: 1.75em;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: .75em;
+  margin: 0 0.75em 0 -2.5em;
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  white-space: nowrap;
+}
+.reveal .sl-block-content > ol > li ol li:before {
+  opacity: .5;
+  text-align: left;
+  box-shadow: none;
+  letter-spacing: .1em;
+}
+.reveal .sl-block-content > ol > li > ol > li > ol > li:before {
+  width: 4em;
+  left: -3em;
+  font-size: .75em;
+}
+.reveal .has-dark-background .sl-block-content > ol > li:before {
+  color: currentcolor;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 0.2em rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.reveal .sl-block-content > ol ol ol li:before {
+  opacity: 1;
+  font-size: .55em !important;
+  width: 3.5em !important;
+}
+.reveal .sl-block-content > ol ol ol {
+  margin-left: 1.5em !important;
+}
+.reveal .uppercase {
+  text-transform: uppercase;
+}
+.reveal .sl-block[data-block-type="text"] > .initial h1,
+.reveal .sl-block[data-block-type="text"] > .initial h2,
+.reveal .sl-block[data-block-type="text"] > .initial h3 {
+  text-transform: initial;
+}
+.reveal .force-mono text,
+.reveal .force-mono tspan,
+.reveal .force-mono polygon,
+.reveal .force-mono path,
+.reveal .force-mono rect,
+.reveal .force-mono ellipse {
+  fill: currentcolor !important;
+}
+.reveal .force-red .stroked path {
+  stroke: #c00;
+}
+.reveal .force-red,
+.reveal .force-red text,
+.reveal .force-red tspan,
+.reveal .force-red polygon,
+.reveal .force-red path,
+.reveal .force-red rect,
+.reveal .force-red ellipse {
+  color: #c00;
+  fill: currentcolor !important;
+}
+.reveal .force-red .stroked {
+  fill: none;
+  stroke: #cc0000;
+}
+.reveal .background-shade-dark .sl-block {
+  color: #fff;
+}
+.reveal .dark-foreground text.logotext,
+.reveal section.background-shade-light text.logotext,
+.reveal section.dark-foreground text.logotext,
+.reveal .dark-foreground .logotext text,
+.reveal section.background-shade-light .logotext text,
+.reveal section.dark-foreground .logotext text,
+.reveal .dark-foreground path.logotext,
+.reveal section.background-shade-light path.logotext,
+.reveal section.dark-foreground path.logotext,
+.reveal .dark-foreground path.logotype,
+.reveal section.background-shade-light path.logotype,
+.reveal section.dark-foreground path.logotype,
+.reveal .dark-foreground .logotext path,
+.reveal section.background-shade-light .logotext path,
+.reveal section.dark-foreground .logotext path,
+.reveal .dark-foreground .product,
+.reveal section.background-shade-light .product,
+.reveal section.dark-foreground .product {
+  fill: currentcolor !important;
+}
+.reveal .dark-foreground .redhat-logo .logotext,
+.reveal section.background-shade-light .redhat-logo .logotext,
+.reveal section.dark-foreground .redhat-logo .logotext {
+  fill: currentcolor !important;
+}
+.reveal .slide-background.background-shade-dark:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.8);
+}
+.reveal .slide-background.background-shade-light:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.reveal .slides section {
+  text-align: left;
+}
+.reveal .slides section h1 {
+  line-height: 1em;
+  font-weight: 700 ;
+  font-size: 3em ;
+}
+.reveal .slides section h2 {
+  font-size: 2em;
+  font-weight: 400 ;
+  line-height: 1.15em;
+}
+.reveal .slides section h3 {
+  font-weight: 700 ;
+  font-size: 1em ;
+  line-height: 1.25em;
+}
+.reveal .slides section p {
+  margin-bottom: .5em;
+}
+.reveal .slides section blockquote {
+  font-style: normal;
+  box-shadow: none;
+}
+.reveal .progress {
+  background-color: transparent;
+}
+.reveal .progress span {
+  background-color: #5e6a71;
+}
+.reveal .absolute-element svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.reveal .icon.stroked {
+  width: 282px;
+  height: 282px;
+}
+.reveal .icon.stroked.icon-arrow path {
+  stroke-width: 4px !important;
+}
+.reveal .icon.stroked path {
+  fill: none;
+  stroke-width: 1.5px;
+  transition-delay: .5s !important;
+  stroke-dashoffset: 0;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentcolor;
+}
+.reveal .icon.stroked path.long {
+  stroke-dasharray: 420,420;
+  transition: 2.5s all ease;
+}
+.reveal .icon.stroked path.longer {
+  stroke-dasharray: 512,512;
+  transition: 2.5s all ease;
+}
+.reveal .icon.stroked path.short {
+  stroke-dasharray: 90,90;
+  transition: 5s all ease;
+}
+.reveal .icon.stroked path.shortest {
+  stroke-dasharray: 5,5;
+  transition: 2s all ease;
+}
+.reveal .icon.stroked path.round {
+  stroke-linecap: round ;
+  stroke-linejoin: round ;
+}
+.reveal .icon.stroked path.virtual {
+  transition: .5s all ease;
+  stroke-dasharray: 1.1, 3;
+  stroke-linecap: round ;
+}
+.reveal .icon.stroked path.dashed {
+  stroke-dasharray: 3, 3;
+}
+.reveal .icon.stroked path.hand {
+  stroke-linecap: round;
+}
+.reveal .present path.virtual {
+  -webkit-animation: virtual-outline 60s infinite linear;
+  -moz-animation: virtual-outline 60s infinite linear;
+  animation: virtual-outline 60s infinite linear;
+}
+@-webkit-keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+@-moz-keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+@keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+.reveal a {
+  box-shadow: 0 0.066666em;
+}
+.reveal .overview section.present {
+  border: 12px solid white !important;
+  box-shadow: 0 0 0 10px #ffffff, inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.reveal .rh-pattern {
+  width: 256px;
+  height: 256px;
+}
+.reveal .rh-pattern path {
+  transition: all .5s ease;
+}
+.reveal .future .rh-pattern path {
+  stroke-dasharray: 0, 85 !important;
+}
+.reveal .present .rh-pattern path {
+  stroke-dasharray: 80, 0 !important;
+}
+.reveal div[data-block-type="snippet"] .sl-block-content > svg,
+.reveal div[data-block-type="snippet"] > .sl-block-content > svg,
+.reveal div[data-block-type="snippet"] .icon,
+.reveal div[data-block-type="snippet"] .product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal div[data-block-type="snippet"] .sl-block-content > svg:not(:last-child) {
+  position: relative;
+}
+.reveal div[data-block-type="snippet"] .icon {
+  top: -15%;
+  right: -15%;
+  bottom: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+}
+.reveal div[data-block-type="snippet"] {
+  min-width: 60px !important;
+}
+.reveal div[data-block-type="text"] {
+  font-size: 20px;
+}
+.reveal .triangle-element,
+.reveal .triangle-element * {
+  user-select: none;
+}
+.reveal .has-light-background .closing-logo.logotype path {
+  fill: black !important;
+}
+@-webkit-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@-moz-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@-o-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+.reveal .present .closing-logo.icon {
+  -webkit-animation: closing-animation 1.5s 1;
+  -moz-animation: closing-animation 1.5s 1;
+  -o-animation: closing-animation 1.5s 1;
+  animation: closing-animation 1.5s 1;
+}
+.reveal .present .closing-logo.logotype {
+  -webkit-animation: closing-text-animation 1.8s 1;
+  -moz-animation: closing-text-animation 1.8s 1;
+  -o-animation: closing-text-animation 1.8s 1;
+  animation: closing-text-animation 1.8s 1;
+}
+@-webkit-keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+@-moz-keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+@keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+.reveal .brand-pattern-paths path,
+.reveal .pattern-path {
+  stroke-width: 1;
+  fill: none;
+}
+.reveal .brand-pattern-paths path {
+  fill: none !important;
+}
+.reveal pattern {
+  patterntransform: scale(2) !important;
+}
+.reveal pattern.normal use {
+  stroke: currentcolor;
+  fill: none;
+}
+.reveal pattern.light use {
+  stroke: #fff !important;
+  fill: none;
+}
+.reveal pattern.dark use {
+  stroke: #000 !important;
+  fill: none;
+}
+.reveal .brand-pattern {
+  min-width: 40px;
+  min-height: 40px;
+  position: absolute;
+  top: 0 ;
+  left: 0 ;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal .brand-pattern path,
+.reveal .brand-pattern rect {
+  width: 100% !important;
+  height: 100%;
+}
+.reveal .brand-pattern.corporate {
+  fill: url(#pattern-corporate);
+}
+.reveal #pattern-corporate-2 use {
+  stroke: #dd0000;
+}
+.reveal #pattern-corporate use {
+  stroke: #cc0000;
+}
+.reveal section,
+.reveal .slide-background {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.reveal .slides > section.transition-slide,
+.reveal .slides > section.transition-slide + section.future,
+.reveal .slides > section.transition-slide + section.present,
+.reveal .backgrounds > .slide-background.transition-slide,
+.reveal .backgrounds > .slide-background.transition-slide + .slide-background.future,
+.reveal .backgrounds > .slide-background.transition-slide + .slide-background.present {
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-slide {
+  opacity: 1 ;
+}
+.reveal .backgrounds > .slide-background.transition-slide.past {
+  z-index: 99;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+.reveal .backgrounds > .slide-background.transition-slide.future,
+.reveal .backgrounds > .slide-background.transition-slide.present + .slide-background.future {
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+.reveal .slides > section.transition-slide.past {
+  z-index: 99;
+  -webkit-transform: translate(-150%, 0);
+  -ms-transform: translate(-150%, 0);
+  transform: translate(-150%, 0);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-slide.future,
+.reveal .slides > section.transition-slide.future + section {
+  -webkit-transform: translate(150%, 0);
+  -ms-transform: translate(150%, 0);
+  transform: translate(150%, 0);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-slide-up,
+.reveal .slides > section.transition-slide-up + section.future,
+.reveal .slides > section.transition-slide-up + section.present,
+.reveal .backgrounds > .slide-background.transition-slide-up,
+.reveal .backgrounds > .slide-background.transition-slide-up + .slide-background.future .backgrounds > .slide-background.transition-slide-up + .slide-background.present {
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-slide-up {
+  opacity: 1 ;
+}
+.reveal .backgrounds > .slide-background.transition-slide-up.past {
+  z-index: 99;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+.reveal .backgrounds > .slide-background.transition-slide-up.future,
+.reveal .backgrounds > .slide-background.transition-slide-up.present + .slide-background.future {
+  -webkit-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+}
+.reveal .slides > section.transition-slide-up.past {
+  z-index: 99;
+  -webkit-transform: translate(0, -150%);
+  -ms-transform: translate(0, -150%);
+  transform: translate(0, -150%);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-slide-up.future,
+.reveal .slides > section.transition-slide-up.present + section {
+  -webkit-transform: translate(0, 150%);
+  -ms-transform: translate(0, 150%);
+  transform: translate(0, 150%);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-zoom-in,
+.reveal .slides > section.transition-zoom-in + section.future,
+.reveal .slides > section.transition-zoom-in + section.present,
+.reveal .backgrounds > .slide-background.transition-zoom-in,
+.reveal .backgrounds > .slide-background.transition-zoom-in + .slide-background.future .backgrounds > .slide-background.transition-zoom-in + .slide-background.present {
+  -webkit-transition: all 1s ease  !important;
+  -moz-transition: all 1s ease  !important;
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-zoom-in.past {
+  opacity: 0 !important;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(0.1 0.5);
+  transform: scale(1.5);
+}
+.reveal .backgrounds > .slide-background.transition-zoom-in.future,
+.reveal .backgrounds > .slide-background.transition-zoom-in.present + .slide-background.future {
+  opacity: 0 !important;
+  -webkit-transform: scale(0.01);
+  -ms-transform: scale(0.01);
+  transform: scale(0.01);
+}
+.reveal .past {
+  z-index: -1;
+  opacity: 0 !important;
+}
+.reveal .present + .slide-background.future {
+  z-index: 99;
+}
+.reveal .slides > section.transition-zoom-in.past {
+  z-index: 99;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-zoom-in.future {
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  visibility: hidden;
+}
+@-webkit-keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: .5px;
+  }
+}
+@-moz-keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: .5px;
+  }
+}
+@keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: .5px;
+  }
+}
+@-webkit-keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+@-moz-keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+@keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+.reveal .present .animate.icon.stroked path,
+.reveal .present .animate .icon.stroked path,
+.reveal .fragment .icon.stroked path {
+  animation: 0;
+  -moz-animation: 0;
+  -webkit-animation: 0;
+  display: none;
+}
+.reveal .present .animate.icon.stroked path.long,
+.reveal .present .animate .icon.stroked path.long,
+.reveal .fragment.visible .icon.stroked path.long {
+  display: block;
+  stroke-width: 2px ;
+  -webkit-animation: icon-animation-long 3.5s 0.5s 1;
+  -moz-animation: icon-animation-long 3.5s 0.5s 1;
+  animation: icon-animation-long 3.5s 0.5s 1;
+}
+.reveal .present .animate.icon.stroked path.short,
+.reveal .present .animate .icon.stroked path.short,
+.reveal .fragment.visible .icon.stroked path.short {
+  display: block;
+  -webkit-animation: icon-animation-short 3.5s 0.5s 1 !important;
+  -moz-animation: icon-animation-short 3.5s 0.5s 1 !important;
+  animation: icon-animation-short 3.5s 0.5s 1 !important;
+}
+.reveal .triangle-element {
+  transition: all 0.4s cubic-bezier(0.21, 0.9, 0.55, 1) 5s;
+}
+.reveal.reveal:hover .triangle-element {
+  transition: all 1s cubic-bezier(0.21, 0.9, 0.55, 1.16) 0s !important;
+  top: 100% !important;
+  left: 100% !important;
+  opacity: 0.95;
+}
+.reveal .has-dark-background .only-dark {
+  display: none;
+}
+.reveal .has-light-background .only-light {
+  display: none;
+}
+.reveal .thinner .icon.stroked path {
+  stroke-width: 1px !important;
+}
+.reveal .thinnest .icon.stroked path {
+  stroke-width: 0.05em !important;
+}
+.reveal .thicker .icon.stroked path {
+  stroke-width: 3px !important;
+}
+.reveal .thickest .icon.stroked path {
+  stroke-width: 4px !important;
+}
+.reveal .angle {
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.reveal .rangle {
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.reveal .sl-block > .vertical {
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.reveal .skewed {
+  transition: all 1s cubic-bezier(0.13, 0.81, 0.08, 1);
+  -moz-transform: skew(-45deg, 0);
+  -ms-transform: skew(-45deg, 0);
+  -webkit-transform: skew(-45deg, 0);
+  transform: skew(-45deg, 0);
+}
+.reveal .future .skewed {
+  margin-left: -800%;
+  opacity: 0;
+}
+.reveal .past .skewed {
+  margin-left: 800%;
+  opacity: 0;
+}
+.reveal .item-label,
+.reveal .item-box {
+  letter-spacing: 0em;
+  font-weight: 500;
+}
+.reveal .epic-content-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.reveal .has-dark-background .epic-content-box {
+  box-shadow: inset 0 0 0.51em rgba(0, 0, 0, 0.25), 0 0.05em 0.05em rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.reveal .has-light-background .epic-content-box {
+  box-shadow: inset 0 0 0.2em rgba(255, 255, 255, 0.5), 0 0.06666em 0.555em 0 rgba(0, 0, 0, 0.12);
+}
+.reveal .controls {
+  bottom: 1%;
+  right: 1%;
+}
+.reveal .controls button {
+  opacity: 0;
+}
+.reveal .controls button.enabled {
+  opacity: 1;
+}
+.reveal .controls {
+  opacity: 0 !important;
+  transition: opacity .5s ease 4.8s, transform .5s ease 4.8s;
+  transform: scale(0.4);
+}
+.reveal.reveal:hover .controls {
+  transform: scale(1);
+  opacity: 1 !important;
+  transition: opacity .5s ease 0s, transform .5s ease 0s;
+}
+.reveal .backgrounds {
+  transition-property: height;
+  transition-duration: 1s;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.reveal .complex-logo {
+  min-height: 70px;
+  min-width: 70px;
+  width: 100%;
+}
+.reveal .complex-logo,
+.reveal .complex-logo svg,
+.reveal .complex-logo > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal .complex-logo > div.line-icon,
+.reveal .complex-logo svg > div.line-icon,
+.reveal .complex-logo > div > div.line-icon,
+.reveal .complex-logo > div.logomark,
+.reveal .complex-logo svg > div.logomark,
+.reveal .complex-logo > div > div.logomark {
+  transform-origin: 12% 50%;
+}
+.reveal .animated .complex-logo div {
+  transition: all .5s ease;
+}
+.reveal .animated .complex-logo div.line-icon {
+  transition-delay: 2s;
+}
+.reveal .animated .complex-logo div.line-icon path {
+  transition: all 1s ease .52s;
+  stroke-dasharray: 100 ,10;
+}
+.reveal .animated .complex-logo div.event-name {
+  transition-delay: 1s;
+}
+.reveal .animated .complex-logo div.location {
+  transition-delay: 1.4s;
+}
+.reveal .future .animated .complex-logo > div {
+  transition: none;
+}
+.reveal .future .animated .complex-logo > div.line-icon path {
+  stroke-dasharray: 0 ,100;
+  transition: none;
+}
+.reveal .future .animated .complex-logo {
+  /*.line-icon{transform:rotate(30deg); opacity:0;}*/
+
+}
+.reveal .future .animated .complex-logo .logomark {
+  transform: translate(0, -20%);
+}
+.reveal .future .animated .complex-logo .location {
+  transform: translate(0, 0.5em);
+  opacity: 0;
+}
+.reveal .future .animated .complex-logo .event-name {
+  opacity: 0;
+  transform: translate(-0.6em, 0);
+}
+.reveal .lowercase {
+  text-transform: lowercase;
+}
+.reveal .pop-in.fragment {
+  -webkit-transform: scale(0.2);
+  -moz-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  transform: scale(0.2);
+  -webkit-transition: 2s ease 0.25s;
+  -moz-transition: 2s ease 0.25s;
+  -ms-transition: 2s ease 0.25s;
+  transition: 2s ease 0.25s;
+  -webkit-animation-delay: 0.66s;
+  -moz-animation-delay: 0.66s;
+  -ms-animation-delay: 0.66s;
+  animation-delay: 0.66s;
+}
+.reveal .pop-in.fragment.visible {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.reveal .pop-in.fragment.current-fragment {
+  color: #c22;
+}
+.reveal .grow-width {
+  -webkit-transition: all 0.5s ease 0.2s;
+  -moz-transition: all 0.5s ease 0.2s;
+  -o-transition: all 0.5s ease 0.2s;
+  -ms-transition: all 0.5s ease 0.2s;
+  transition: all 0.5s ease 0.2s;
+}
+.reveal .future .grow-width {
+  width: 0% !important;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+.reveal .stampit {
+  -webkit-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  -moz-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  -ms-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+}
+.reveal .future .stampit {
+  -webkit-transform: rotate(-12deg) scale(2);
+  -moz-transform: rotate(-12deg) scale(2);
+  -ms-transform: rotate(-12deg) scale(2);
+  transform: rotate(-12deg) scale(2);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
+  opacity: 0;
+}
+.reveal .headshot img {
+  border-radius: 50%;
+  border: 4px solid #c00 !important;
+}
+.reveal .condensed {
+  letter-spacing: 0.02em;
+}
+.reveal .condensed li {
+  margin-bottom: 1em ;
+}
+.reveal .has-light-background .sl-block .has-dark-background > svg.redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .sl-block .reversed.redhat-logo .logotext,
+.reveal .has-light-background .sl-block .reversed .redhat-logo .logotext,
+.reveal .has-light-background .sl-block .has-dark-background > .redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-dark-background .sl-block .reversed.redhat-logo .logotext,
+.reveal .has-dark-background .sl-block .reversed .redhat-logo .logotext,
+.reveal .has-dark-background .sl-block .has-light-background > .redhat-logo .logotext {
+  fill: #000000 !important;
+}
+.reveal .has-dark-background .has-light-background .logo .only-dark path,
+.reveal .has-light-background .mono.redhat-logo path {
+  fill: #000000 !important;
+}
+.reveal .has-dark-background .mono.redhat-logo path {
+  fill: #ffffff;
+}
+.reveal .has-dark-background .logo .only-dark {
+  display: block;
+}
+.reveal .has-light-background .logo .only-light {
+  display: block;
+}
+.reveal .has-light-background .logo .only-dark {
+  display: none;
+}
+.reveal .has-dark-background .logo .only-light {
+  display: none;
+}
+.reveal .has-light-background .reversed svg path {
+  fill: #ffffff !important;
+}
+.reveal .has-dark-background .reversed svg path {
+  fill: currentcolor;
+}
+.reveal .has-dark-background .has-light-background .logo .only-light,
+.reveal .has-dark-background .reversed .logo .only-dark {
+  display: block;
+}
+.reveal .has-light-background .has-dark-background .logo .only-dark,
+.reveal .has-light-background .logo .only-light {
+  display: block;
+}
+.reveal .has-light-background .has-dark-background .redhat-logo .only-dark,
+.reveal .has-light-background .redhat-logo .only-light {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .has-dark-background .logo .only-light,
+.reveal .has-light-background .logo .only-dark,
+.reveal .has-dark-background .has-light-background .logo .only-dark,
+.reveal .has-dark-background .logo .only-light {
+  display: none;
+}
+.reveal .future .fade-up,
+.reveal .future .fade-down,
+.reveal .future .fade-left,
+.reveal .future .fade-right,
+.reveal .future .fade-zoom {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-up,
+.reveal .fade-up.fragment {
+  -webkit-transform: translate(0, 2em);
+  -ms-transform: translate(0, 2em);
+  transform: translate(0, 2em);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-down,
+.reveal .fade-down.fragment {
+  -webkit-transform: translate(0, -2em);
+  -ms-transform: translate(0, -2em);
+  transform: translate(0, -2em);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-left,
+.reveal .fade-left.fragment {
+  -webkit-transform: translate(2em, 0);
+  -ms-transform: translate(2em, 0);
+  transform: translate(2em, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-right,
+.reveal .fade-right.fragment {
+  -webkit-transform: translate(-2em, 0);
+  -ms-transform: translate(-2em, 0);
+  transform: translate(-2em, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-zoom,
+.reveal .fade-zoom.fragment {
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-in {
+  transition: none;
+  opacity: 0;
+}
+.reveal .present .fade-in,
+.reveal .present .fade-up,
+.reveal .present .fade-down,
+.reveal .present .fade-left,
+.reveal .present .fade-right,
+.reveal .present .fade-zoom {
+  -webkit-transition: all .5s ease .5s;
+  transition: all .5s ease .5s;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.reveal .present .fragment.visible.fade-up,
+.reveal .present .fragment.visible.fade-down,
+.reveal .present .fragment.visible.fade-left,
+.reveal .present .fragment.visible.fade-right,
+.reveal .present .fragment.visible.fade-zoom {
+  -webkit-transform: none ;
+  -ms-transform: none ;
+  transform: none ;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.reveal .sl-block {
+  font-family: "Overpass 2", "Hiragino Kaku Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Overpass, sans-serif !important;
+}
+.reveal .has-light-background .icon.stroked {
+  color: currentcolor;
+}
+.reveal .has-dark-background .icon.stroked path {
+  stroke: currentcolor;
+}
+.reveal .has-dark-background .only-light-background {
+  display: none !important;
+}
+.reveal .has-dark-background .only-dark-background {
+  display: block !important;
+}
+.reveal a.call-to-action:hover {
+  background-color: #d00 !important;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.05) !important;
+  text-shadow: none !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table td {
+  border-color: currentcolor !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table td {
+  text-align: inherit !important;
+}
+.reveal .sl-block[data-block-type="text"] table {
+  width: 100%;
+}
+.reveal .sl-block[data-block-type="text"] table td {
+  border-color: currentcolor;
+}
+.reveal .sl-block[data-block-type="text"] table td {
+  text-align: inherit;
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person {
+  border-radius: 50%;
+  position: relative !important;
+  background-color: transparent;
+  height: auto !important;
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person:before {
+  content: "" !important;
+  display: block !important;
+  padding-top: 100% ;
+  position: relative !important ;
+  /* 4:3 aspect ratio */
+
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person > img {
+  position: absolute ;
+  margin: 0 auto !important;
+  left: 0% ;
+  right: 0 ;
+  width: auto !important;
+  top: 0  ;
+  bottom: 0 ;
+}
+.reveal .present .delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal .present .delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal .present .delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal .present .delay-4 {
+  transition-delay: 0.4s;
+}
+.reveal .present .delay-5 {
+  transition-delay: 0.5s;
+}
+.reveal .present .delay-6 {
+  transition-delay: 0.6s;
+}
+.reveal .present .delay-7 {
+  transition-delay: 0.7s;
+}
+.reveal .present .delay-8 {
+  transition-delay: 0.8s;
+}
+.reveal .present .delay-9 {
+  transition-delay: 0.9s;
+}
+.reveal .present .delay-10 {
+  transition-delay: 1s;
+}
+.reveal .present .delay-11 {
+  transition-delay: 1.1s;
+}
+.reveal .present .delay-12 {
+  transition-delay: 1.2s;
+}
+.reveal .present .delay-13 {
+  transition-delay: 1.3s;
+}
+.reveal .present .delay-14 {
+  transition-delay: 1.4s;
+}
+.reveal .present .delay-15 {
+  transition-delay: 1.5s;
+}
+.reveal .present .delay-16 {
+  transition-delay: 1.6s;
+}
+.reveal .present .delay-17 {
+  transition-delay: 1.7s;
+}
+.reveal .present .delay-18 {
+  transition-delay: 1.8s;
+}
+.reveal .present .delay-19 {
+  transition-delay: 1.9s;
+}
+.reveal .present .delay-20 {
+  transition-delay: 2s;
+}
+.reveal .present .delay-21 {
+  transition-delay: 2.1s;
+}
+.reveal .present .delay-22 {
+  transition-delay: 2.2s;
+}
+.reveal .present .delay-23 {
+  transition-delay: 2.3s;
+}
+.reveal .present .delay-24 {
+  transition-delay: 2.4s;
+}
+.reveal .present .delay-25 {
+  transition-delay: 2.5s;
+}
+.reveal .present .delay-26 {
+  transition-delay: 2.6s;
+}
+.reveal .present .delay-27 {
+  transition-delay: 2.7s;
+}
+.reveal .present .delay-28 {
+  transition-delay: 2.8s;
+}
+.reveal .present .delay-29 {
+  transition-delay: 2.9s;
+}
+.reveal .present .delay-30 {
+  transition-delay: 3s;
+}
+.reveal .present .delay-31 {
+  transition-delay: 3.1s;
+}
+.reveal .present .delay-32 {
+  transition-delay: 3.2s;
+}
+.reveal .present .delay-33 {
+  transition-delay: 3.3s;
+}
+.reveal .present .delay-34 {
+  transition-delay: 3.4s;
+}
+.reveal .present .delay-35 {
+  transition-delay: 3.5s;
+}
+.reveal .present .delay-36 {
+  transition-delay: 3.6s;
+}
+.reveal .present .delay-37 {
+  transition-delay: 3.7s;
+}
+.reveal .present .delay-38 {
+  transition-delay: 3.8s;
+}
+.reveal .present .delay-39 {
+  transition-delay: 3.9s;
+}
+.reveal .present .delay-40 {
+  transition-delay: 4s;
+}
+.reveal .light-foreground .sl-block * {
+  color: #fff;
+}
+.reveal .dark-foreground .sl-block * {
+  color: #000;
+}
+.reveal .has-dark-background .invert {
+  color: #000;
+}
+.reveal .has-light-background .invert * {
+  color: #fff ;
+}
+.reveal .has-light-background .invert .only-light-background {
+  display: none ;
+}
+.reveal .has-light-background .invert .only-dark-background {
+  display: block !important;
+}
+.reveal .has-dark-background .invert .only-light-background {
+  display: block !important ;
+}
+.reveal .has-dark-background .invert .only-dark-background {
+  display: none !important;
+}
+.reveal .slide-number {
+  position: absolute !important;
+  opacity: 1;
+  right: 1em;
+  height: 28px;
+  min-width: 28px;
+  bottom: auto;
+  left: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 28px;
+  line-height: 28px;
+  color: white;
+  text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4);
+  top: 1em;
+  font-family: "Overpass 2", Overpass, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 4px;
+  box-sizing: content-box;
+}
+.reveal .slide-number-delimiter {
+  margin: 0 1px;
+}
+.reveal.reveal .present.in-3d-appear {
+  transform: translatez(0em) !important;
+  animation: none !important;
+  transition: transform 1s ease !important;
+}
+.reveal.reveal .future.in-3d-appear {
+  transform: translatez(10em) rotateX(21deg) !important;
+  animation: none !important;
+}
+.reveal .no-filter img,
+.reveal .no-filter {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+.reveal .present .fade-in-slow {
+  transition: all 5s ease;
+}
+.reveal .future .fade-in-slow {
+  transition: none;
+  opacity: 0;
+}
+.reveal .redhat-logo .logotext {
+  fill: #000000 !important;
+}
+.reveal .has-dark-background .redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal [data-block-type="table"] .sl-block-content {
+  font-size: .75em;
+  background-color: #c00;
+  color: #fff;
+}
+.reveal [data-block-type="table"] td {
+  background-color: #e5e5e5;
+  color: #333;
+  border-color: white;
+}
+.reveal div[data-block-type="table"] th {
+  font-weight: 500;
+}
+.reveal [data-block-type="table"] tr:nth-child(odd) td {
+  background-color: #f5f5f5;
+  color: #333;
+}
+.reveal .has-dark-background > [data-block-type="table"] td {
+  background-color: #131619;
+  color: #fff;
+}
+.reveal .has-dark-background > [data-block-type="table"] tr:nth-child(odd) td {
+  background-color: #232629;
+  color: #fff;
+}
+.reveal [data-block-type="code"],
+.reveal .hljs {
+  background-color: white ;
+  color: rgba(55, 55, 55, 0.85) !important;
+}
+.reveal section .hljs {
+  background-color: white !important;
+}
+.reveal .has-dark-background [data-block-type="code"],
+.reveal .has-dark-background .hljs {
+  background-color: #012736!important ;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.reveal [data-block-type="code"] pre {
+  letter-spacing: 0.015em;
+  line-height: 1.5em;
+}
+.reveal .has-light-background[data-block-type="code"] pre,
+.reveal [data-block-type="code"] pre {
+  background-color: white ;
+  color: currentcolor;
+  padding: 1em !important;
+}
+.reveal .has-dark-background [data-block-type="code"] pre {
+  background-color: #012736 ;
+}
+.reveal .hljs,
+.reveal pre,
+.reveal code {
+  font-family: 'Overpass Mono', monospace !important;
+  font-weight: 200 !important;
+}
+.reveal .hljs-literal {
+  color: #ffb612 !important;
+}
+.reveal .hljs-keyword {
+  color: #ffb612;
+  font-weight: 700 !important;
+}
+.reveal .hljs-string {
+  color: #88c639;
+  font-weight: 700;
+}
+.reveal .hljs-comment {
+  color: #94a0a7 !important;
+  font-weight: 400 !important;
+}
+.reveal .hljs-params {
+  color: #028c98 ;
+  font-weight: 700;
+}
+.reveal .hljs-attr {
+  color: #EC7A08 !important;
+}
+.reveal .hljs-tag {
+  color: #7F5FAE !important;
+}
+.reveal .hljs-name {
+  color: #028c98 !important;
+}
+.reveal .hljs-string {
+  color: #7f5fae !important;
+}
+.reveal .hljs-comment {
+  color: rgba(125, 125, 125, 0.65) !important;
+}
+.reveal .hljs-number {
+  color: #4e9fdd !important;
+}
+.reveal .hljs-attribute {
+  color: #ec9e34 !important;
+}
+.reveal .hljs-variable {
+  color: #4e9fdd !important;
+}
+.reveal .hljs-built_in {
+  color: #ee1122!important;
+}
+.reveal .hljs-selector-class {
+  color: #55aab2 !important;
+}
+.reveal [data-line-end-type="line-arrow"] line,
+.reveal [data-line-start-type="line-arrow"] line,
+.reveal [data-line-end-type="line-arrow"] path {
+  stroke-linecap: round;
+  stroke-linejoin: square;
+}
+.reveal div[data-block-type="line"] line[stroke="#000000"],
+.reveal div[data-block-type="line"] path[stroke="#000000"] {
+  stroke: currentcolor;
+}
+.reveal [fill="none"] {
+  fill: none !important;
+}
+.reveal [fill="#a30000"] {
+  fill: #aa0000 !important;
+}
+.reveal [fill="#cc2029"],
+.reveal [fill="#cb2027"],
+.reveal [fill="#c00"] {
+  fill: #cc0000 !important;
+}
+.reveal [fill="#fff"] {
+  fill: #ffffff !important;
+}
+.reveal [fill="#6d6e70"] {
+  fill: #6d6e70 !important;
+}
+.reveal [fill="#231f20"] {
+  fill: currentcolor !important;
+}
+.reveal [fill="#efab1f"] {
+  fill: #efab1f !important;
+}
+.reveal [fill="#92d400"] {
+  fill: #92d400 !important;
+}
+.reveal .has-dark-background [fill="#6d6e70"] {
+  fill: #266272 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #555555 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #333333 !important;
+}
+.reveal .has-dark-background [stroke="#231f20"] {
+  stroke: currentcolor;
+}
+.reveal .has-dark-background [fill="#221F1F"],
+.reveal .has-dark-background [fill="#221f1f"],
+.reveal .has-dark-background [fill="#231F20"],
+.reveal .has-dark-background [fill="#010101"] {
+  fill: #ffffff !important;
+}
+.reveal [data-inline-svg="true"] img {
+  display: none;
+}
+.reveal .corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 8;
+}
+.reveal .corner svg {
+  transition: all .75s ease 5s;
+}
+
+		</style>
+
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-no-color">
+		<div class="reveal">
+			<div class="slides">
+				<section class="transition-slide transition-zoom-in transition-slide-up" data-id="6dd0b51afe6b271ab98106160745256f" data-background-color="#07b9e4"><div class="sl-block" data-block-type="text" style="width: 786px; left: 160px; top: 305px; height: auto;" data-block-id="f776d3d36055243977ee3edd5a107858"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="da832bc3-5fcf-7065-7bc0-63cfef48edf5" data-gramm="true" data-gramm_editor="true" style="z-index: 11;">
+<h1>Home Assistant</h1>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 340px; top: 481px;" data-block-id="5ff96cd624087ef2a2cdb2fe4aa5d397"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-gramm_id="f7ab652e-c17f-c60b-fc6e-7364e14f0635" data-gramm="true" data-gramm_editor="true">
+<h3 style="text-align:right"><span style="font-size:1.2em">Marcelo Moreira de Mello</span></h3>
+
+<p> </p>
+
+<p> </p>
+
+<p>October, 2017</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 184px; height: 186px; left: 93px; top: 107px;" data-block-id="0905f8309ca41eb335af41b3cf1c02a5"><div class="sl-block-style" style="z-index: 13;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="24de2140733ed0cb29cc8de353e8bc50"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 38px; top: 74px;" data-block-id="b74c472eb4c57ef120e99785609057bc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>Agenda</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="4c25ef59bdeb82e5058f7502d1643f3e"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 818px; left: 123px; top: 186px;" data-block-id="49cb4792ea4748ac0a611bc81d3d48f1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>
+	<h2>What is Home Automation</h2>
+	</li>
+	<li>
+	<h2>Home Assistant</h2>
+
+	<ul>
+		<li>
+		<h3>Installation</h3>
+		</li>
+		<li>
+		<h3>Components</h3>
+		</li>
+		<li>
+		<h3>Examples</h3>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p> </p>
+
+<ul>
+	<li>
+	<h2>Live Demo</h2>
+	</li>
+</ul>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="4b28a67a28e0989382531bd6294bffc4"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 38px; top: 70px;" data-block-id="5d91a6a732f80fa6a890a7983008381f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h1>Who am I?</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="ff3d6d814ff85a5a80405ffa96c3ad5d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 173px;" data-block-id="b434868cff52ac182cfd850e26e78919"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui" data-gramm_id="b0a855cf-ddf4-09ce-f922-fe3fc3a8d35f" data-gramm="true" data-gramm_editor="true">
+<p><span style="font-size:1.4em">Home Assistant Contributor</span></p>
+
+<p><span style="font-size:1.4em">Pythonista Enthusiast</span></p>
+
+<p><span style="font-size:1.4em">Beer++ BBQ++ Photograph++</span></p>
+
+<p><span style="font-size:1.4em">Twitter:<strong> @tchellomello</strong></span></p>
+
+<p><span style="font-size:1.4em">https://github.com/tchellomello</span></p>
+
+<p> </p>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="67d89aa3d436181939a4ec1ea0b3f881"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 38px; top: 70px;" data-block-id="b5f955d36cb6fcab06b571b341fcb9b6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h1>Home assistant</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 818px; left: 80px; top: 139px;" data-block-id="e9ffbab3c4b1fe9a87ab85de53b1b73c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; white-space: normal;">
+<ul>
+	<li><span style="font-size:1.6em">Python 3</span></li>
+	<li><span style="font-size:1.6em">Apache 2.0 (formerly MIT)</span></li>
+	<li><span style="font-size:1.6em">4 years old (First Commit: 17 September 2013)</span></li>
+	<li><span style="font-size:1.6em">Validation with PEP8 / PyFlakes / PyLint</span></li>
+	<li>
+<span style="font-size:1.6em">94% Test coverage (</span>without integration<span style="font-size:1.6em">)</span>
+</li>
+	<li><span style="font-size:1.6em">Release cycle: every two weeks</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="54e4323061e6f8576ffb525401364b38"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 214px; left: 147px; top: 416px;" data-block-id="7242f094a5cf4bdf6fa3214b48049a4f"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="996" data-natural-height="265" data-lazy-loaded="" data-src="home-assistant-qecampx-1/8a7a96cf0b1a19e9d52c43235ecd121e.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="8d3885abaca1e6a8f8b5b2f5f52c7e70"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 630px; left: 0px; top: 66px;" data-block-id="d6d1a432b176a9ac5ac2accb75423b6e"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1213" data-natural-height="796" data-lazy-loaded="" data-src="home-assistant-qecampx-1/52e821ce4672963ef58341669fee33fb.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 980px; left: 6px; top: 32px;" data-block-id="2b8e98886556acea58ac83c8babf648b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3 style="text-align: center;"><span style="font-size:1.6em">+800 integrations</span></h3>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="6ddc370758365a976bdd932a8e71e573"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 38px; top: 70px;" data-block-id="2cdf6c8664641ba6772284a6ca1a0f16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h1>Users....</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="998b8c7f3bd6b6ea1fb841644d913cda"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 935px; height: 446px; left: 23px; top: 177px;" data-block-id="0f1dab632a731f5e1152ea648890ae9d"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1908" data-natural-height="910" data-lazy-loaded="" data-src="home-assistant-qecampx-1/b5cb82da0370f426238fe2d029ba1328.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="36551a647f790a4a369b2383af823f74"><div class="sl-block" data-block-type="text" style="height: auto; width: 462px; left: 38px; top: 140px;" data-block-id="9629f4b804a4994ebfb444284b24eaa8"><div class="sl-block-style" style="z-index: 10; transform: rotate(360deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2><span style="font-size:1.4em">Installation</span></h2>
+</div></div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="80f742a46017873bb84ad05744efe9be"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 510px; height: 133px; left: 448px; top: 141px;" data-block-id="5cd0a9830333adedee6a46080bde10e2"><div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s;" data-highlight-theme="ascetic" data-animation-type="fade-in"><pre class="python"><code>$ virtualenv -p python3.6 ~/.virtualenvs/ha-py36
+$ source ~/virtualenvs/ha-py36/bin/activate
+$ pip3 install homeassistant
+$ hass --verbose</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 236px; height: 83px; left: 448px; top: 58px;" data-block-id="d685527b074b71ea7c32eb705531e4f9"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="475" data-natural-height="167" data-lazy-loaded="" data-src="home-assistant-qecampx-1/48b993dfd8d99bef4fa1051cdf7ba956.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 465px; height: 419px; left: 24px; top: 280px;" data-block-id="4f95ee20e388dbfd8c31c97068de615f"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="641" data-natural-height="577" data-lazy-loaded="" data-src="home-assistant-qecampx-1/4bf0768d69a77ce205e66c628c6f8e8b.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 398px; height: 28px; left: 550px; top: 350px;" data-block-id="a8e2250c3da41238f0fd080575ae5601"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="434" data-natural-height="31" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f35b9c6319eba395dd8ddd70789489e5.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 202px; left: 547px; top: 319px;" data-block-id="8aa9841369bda17e583b81dbf9c51c09"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><span style="font-size:1.2em">Ansible Playbooks</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 458px; height: 137px; left: 500px; top: 512px;" data-block-id="0ecb2a7fa88a87e5ad822b7574e198a3"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 18;"><pre class="python"><code>docker run --rm --name="home-assistant" \
+    -v /path/to/your/config:/config \
+    -v /etc/localtime:/etc/localtime:ro \
+    --net=host homeassistant/home-assistant</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 202px; left: 507px; top: 481px;" data-block-id="ce23adb4916235acf3cb9b498f4115fd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19;">
+<p>Docker</p>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="f61cc1b5ecf58f6d695b0dbaead47415"><div class="sl-block" data-block-type="text" style="height: auto; width: 836px; left: 44px; top: 14px;" data-block-id="ad8ef6ef3f9bcce6f053315196fff190"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: right;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true" dir="ui">
+<h2><span style="font-size:1.4em">What is home automation?</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="a86a0d5a43a3f6b7852393c78cf29774"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 53px; top: 104px;" data-block-id="20dbc622255422be9e62cdd3b0329355"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<h3><span style="color:#000000">Triggered by an event</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 853px; left: 52px; top: 296px;" data-block-id="bfd3625fd32fa8fba5b6e09a5a548634"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="2">
+<h3><span style="color:#000000">Optional conditions based on the current status of the devices</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 844px; left: 46px; top: 497px;" data-block-id="1e6bb7c896f123243b632db71ca4b158"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="4">
+<h3><span style="color:#000000">Action which can control a device or external service</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 91px; top: 134px;" data-block-id="41612d8dc7fe82d47588335d457ae039"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-fragment-index="1">
+<ul>
+	<li>Arrive or leave the house</li>
+	<li class="visible">Voice command</li>
+	<li>Presence detection</li>
+	<li>Motion sensor</li>
+	<li>Weather conditions</li>
+	<li>Time/Sunset/Sunrise</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 326px;" data-block-id="47dd0be3a5095b75ed401719c1bae8aa"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" dir="ui" data-fragment-index="3">
+<ul>
+	<li>On week days</li>
+	<li class="visible">When nobody is at home</li>
+	<li>After X minutes</li>
+	<li>If a test build failed</li>
+	<li>Heading to home</li>
+	<li>Arrived at work</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 527px;" data-block-id="2b4a302570653206ad68e57cf71c5899"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;" data-fragment-index="5">
+<ul>
+	<li>Arm alarm</li>
+	<li class="visible">Find my phone</li>
+	<li>Turn on my car</li>
+	<li>Slow down fan</li>
+	<li>Increase temperature</li>
+</ul>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="e51bc103c45ebe19737f9fece4070e1c">
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 870px; height: 456px; left: 62px; top: 244px;" data-block-id="d861415d0449cd17392f23a110d4c0a5"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="935" data-natural-height="490" data-lazy-loaded="" data-src="home-assistant-qecampx-1/ddb557997ea408876982708fc98883d8.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="9b8ecd993755a3ed73882d6636205b45"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 853px; left: 20px; top: 18px;" data-block-id="0252ff482646b7b7df81630fec772ee4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul style="color:rgb(34, 34, 34); text-align:left">
+	<li>
+<strong>Event Bus</strong>: <span style="color:#ffffff">facilitates the firing and listening of events – the heart  of Home Assistant.</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 853px; left: 20px; top: 80px;" data-block-id="72f4717066ad96f8faefdc33a07334c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<ul style="color:rgb(34, 34, 34); text-align:left">
+	<li>
+<strong>State Machine</strong>: <span style="color:#ffffff">keeps track of the states of things and fires a <strong>state_changed</strong> event when a state has been changed.</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 921px; left: 20px; top: 153px;" data-block-id="a86dc6a9a284191ffce0cd076cfabcf2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<ul style="color:rgb(34, 34, 34); text-align:left">
+	<li>
+<strong>Service Registry</strong>: <span style="color:#ffffff">listens on the event bus for <strong>call_service</strong> events and allows other code to register services.</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 904px; left: 20px; top: 225px;" data-block-id="8c6f9c4a7f8fdb50e009abee843066c8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<ul style="color:rgb(34, 34, 34); text-align:left">
+	<li>
+<strong>Timer</strong>: <span style="color:#ffffff">sends a <strong>time_changed</strong> event every 1 second on the event bus.</span>
+</li>
+</ul>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="13f188f538db3fd7d1211641fa7a9172"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 280px; top: 22px;" data-block-id="b71929292edb379475a01bb72788ad01"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true" dir="ui">
+<h2><span style="font-size:1.4em">At A glance.....</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="cfd973a6c603c7825efc8efcdc351140"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 648px; height: 179px; left: 16px; top: 101px;" data-block-id="3ded8bb9f453d2b6487f301af98f8d9b"><div class="sl-block-style" style="z-index: 13; transform: rotate(360deg);"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 13;"><pre class="bash"><code>$ hass --config ~/.hademo --script ensure_config
+$ hass --config ~/.hademo --script check_config
+$ hass -c ~/.hademo --verbose --debug
+
+# Demo mode
+$ hass -c --demo-mode --open-ui
+</code></pre></div></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 656px; height: 385px; left: 279px; top: 314px;" data-block-id="de550a1d1f03774e3ec503222be0034e"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="965" data-natural-height="566" data-lazy-loaded="" data-src="home-assistant-qecampx-1/3279caa4230e5fbd99b4f3f584f135df.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="d5fe3ab492384dc23e8f9ef06e09a713"><div class="sl-block" data-block-type="text" style="height: auto; width: 525px; left: 358px; top: 13px;" data-block-id="4661b2675fb36beec0eda19f4fa9f136"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">Formatting Style</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 888px; top: 1px;" data-block-id="7dd431709e44b64d877fb38cafb4ad90"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 58px; top: 98px;" data-block-id="dc4484d8a3e24106e76c22fce0762289"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(0, 0, 0);" data-gramm_id="277724ab-8329-a623-5a2b-ba335f6b582d" data-gramm="true" data-gramm_editor="true">
+<pre>notify: !include notify.yaml
+sensor: !include sensors.yaml
+
+ring:
+  username: !secret ring_user
+  password: !secret ring_pwd</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 45px; top: 67px;" data-block-id="d4ed1d0040d7167d88c0c80e830ad087"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p><span style="font-size:1.2em">In <em>configuration.yaml</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 498px; height: 165px; left: 47px; top: 93px;" data-block-id="70b21601ab6448499b2a73434e1fb619"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(209, 212, 211)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 498 165"><rect width="498" height="165" class="shape-element" fill="rgb(209, 212, 211)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 476px; left: 452px; top: 274px;" data-block-id="25d4c6fed385de641799d2e8a74da6e9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; text-align: right;">
+<p><span style="font-size:1.2em">In <em>notify.yaml</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 358px; left: 570px; top: 309px;" data-block-id="b13531d2bdccd5c2eb3854edbed06b4c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0); text-align: right;" data-gramm_id="277724ab-8329-a623-5a2b-ba335f6b582d" data-gramm="true" data-gramm_editor="true">
+<pre>- platform: pushbullet
+  api_key: "o.1234abcd"
+  name: pushbullet</pre>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 368px; height: 86px; left: 560px; top: 305px;" data-block-id="62977bdc45625bcfd5ec1e06aac0af85"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(209, 212, 211)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 368 86"><rect width="368" height="86" class="shape-element" fill="rgb(209, 212, 211)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 47px; top: 420px;" data-block-id="5f7604ea2957fadbd1a70f684e414c2e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20;">
+<p><span style="font-size:1.2em">In <em>sensor.yaml</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 45px; top: 451px;" data-block-id="6234571f7428c287a6c235461670a03c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);" data-gramm_id="277724ab-8329-a623-5a2b-ba335f6b582d" data-gramm="true" data-gramm_editor="true">
+<pre>  - platform: mqtt
+    state_topic: sensor2/topic
+
+  - platform: ring
+    monitored_conditions:
+      - battery
+      - last_ding
+      - last_motion
+
+</pre>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 478px; height: 201px; left: 45px; top: 451px;" data-block-id="743b9045a597379872252595f0c83362"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(209, 212, 211)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 478 201"><rect width="478" height="201" class="shape-element" fill="rgb(209, 212, 211)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 400px; top: 242px;" data-block-id="3f6a445c8e84dfc4b83a9b7213c8f300"><div class="sl-block-content fragment fade-up" data-line-x1="241" data-line-y1="240" data-line-x2="20" data-line-y2="-8" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 22;" data-line-style="dotted" data-fragment-index="0" data-line-width="15px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="221" height="248" viewbox="20 -8 221 248"><line stroke="#000000" stroke-width="15" stroke-dasharray="0 27.68184824433192" stroke-linecap="round" x1="234.5" y1="232.5" x2="20.5" y2="-7.5"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="15" transform="translate(234,232) rotate(-41.705)" d="M -33.75 -33.75 L 0 0 L 33.75 -33.75"></path></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 230px; left: 612px; top: 506px;" data-block-id="dead8a7b7bc647b860602cbd3a05fee1"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; text-align: left;" data-fragment-index="1">
+<p><span style="font-size:1.2em">In <em>secrets.yaml</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 297px; left: 612px; top: 541px;" data-block-id="3a491284bb6c94217cba3eef4f9a0bd4"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(0, 0, 0); text-align: right;" data-gramm_id="277724ab-8329-a623-5a2b-ba335f6b582d" data-gramm="true" data-gramm_editor="true" data-fragment-index="2">
+<p style="text-align: left;">ring_user: foo@bar</p>
+
+<p style="text-align: left;">ring_pwd: secret12345</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 278px; height: 81px; left: 602px; top: 533px;" data-block-id="b90ec18653705a367a71168b4f5e8719"><div class="sl-block-style" style="z-index: 10;"><div class="sl-block-content fragment" data-shape-type="rect" data-shape-fill-color="rgb(209, 212, 211)" data-shape-stretch="true" style="z-index: 10;" data-fragment-index="2"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 278 81"><rect width="278" height="81" class="shape-element" fill="rgb(209, 212, 211)"></rect></svg></div></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="e85efdac9e97dd96bfdd6436352d45a7"><div class="sl-block" data-block-type="text" style="height: auto; width: 525px; left: 358px; top: 13px;" data-block-id="ccf3240136bfbcb73a2cbe5a55de9587"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">PARSING COnfiguration</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 888px; top: 1px;" data-block-id="2bb563203f480d08d6262d680fd4312a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 822px; left: 80px; top: 210px;" data-block-id="e2a255e448f030a97613873ecd69509f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span style="font-size:1.8em">$ hass --config ~/.hademo --script check_config</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 974px; height: 305px; left: 0px; top: 291px;" data-block-id="0f6e394e8ef388cb8506c99a6fe07b43"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 14; font-size: 93%;"><pre class="python"><code>(python:ha-py36) ↪ hass -c ~/.hademo/ --script check_config
+Testing configuration at /home/mdemello/.hademo/
+2017-09-26 01:52:48 INFO (MainThread) [homeassistant.setup] Setting up introduction
+2017-09-26 01:52:48 INFO (MainThread) [homeassistant.setup] Setting up http
+2017-09-26 01:52:48 INFO (MainThread) [homeassistant.setup] Setting up recorder
+2017-09-26 01:52:48 INFO (MainThread) [homeassistant.setup] Setup of domain http took 0.0 seconds.
+2017-09-26 01:52:48 INFO (MainThread) [homeassistant.setup] Setup of domain recorder took 0.0 seconds.
+2017-09-26 01:52:48 INFO (MainThread) [homeassistant.setup] Setting up api
+2017-09-26 01:52:48 INFO (MainThread) [homeassistant.setup] Setting up websocket_api
+</code></pre></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="08569be7126990ada206197baf03593a"><div class="sl-block" data-block-type="text" style="height: auto; width: 761px; left: 119px; top: 12px;" data-block-id="cddf124b515f5b657b34215c245af28f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: right;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2><span style="font-size:1.0em">Initial configuration.yaml</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="60ac63f5beb6254f8352eee08dd07218"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 924px; height: 639px; left: 20px; top: 59px;" data-block-id="0697cfc0989da7990c61519aab564552"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 12; font-size: 96%;"><pre class="yaml"><code>homeassistant:
+  name: Home
+  latitude: 36.92910
+  longitude: -78.749679
+  elevation: 0
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include customize.yaml
+frontend:
+config:
+http:
+  api_password: !secret web_password
+updater:
+  include_used_components: true
+discovery:
+conversation:
+history:
+logbook:
+sun:
+sensor:
+  - platform: yr
+tts:
+  - platform: google
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml</code></pre></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="b7a3ff518ff4e054aea05055f6c7fb5b"><div class="sl-block" data-block-type="text" style="height: auto; width: 292px; left: 574px; top: 14px;" data-block-id="409728f2c26765138ba335c6c1fe8dbc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">GROUPS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="d422d7026a551dbb1a406632b7da053c"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 610px; height: 101px; left: 52px; top: 87px;" data-block-id="9740f66aac8ae4156b44ad8296b6c1b0"><div class="sl-block-style" style="z-index: 13;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="574" data-natural-height="95" data-lazy-loaded="" data-src="home-assistant-qecampx-1/cef8ac3d5b2c7e0828eef54f9d995243.png"></div></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 262px; top: 194px;" data-block-id="3b7fe9485850463bd5da6cbfa40ec601"><div class="sl-block-content" data-line-x1="62" data-line-y1="103" data-line-x2="200" data-line-y2="0" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 14;" data-line-width="4px" data-line-style="dotted"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="138" height="103" viewbox="62 0 138 103"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="64" y1="101" x2="200" y2="0"></line><line stroke="#000000" stroke-width="4" stroke-dasharray="0 7.82729384433853" stroke-linecap="round" x1="64" y1="101" x2="200" y2="0"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="4" transform="translate(64,101) rotate(53.263)" d="M -9 -9 L 0 0 L 9 -9"></path></svg></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 449px; height: 218px; left: 16px; top: 311px;" data-block-id="5f98f3c3719e794954163cb203ec00c8"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 15;"><pre class="yaml"><code>Cameras View:
+  name: Cameras
+  icon: mdi:video
+  view: yes 
+  entities:
+    - binary_sensor.ring_front_door_ding
+    - binary_sensor.ring_front_door_motion
+</code></pre></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 446px; top: 194px;" data-block-id="bd171a181c915b120f33449572e1f826"><div class="sl-block-content" data-line-x1="143" data-line-y1="79" data-line-x2="51" data-line-y2="-56" data-line-color="#000000" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 16;" data-line-width="4px" data-line-style="dotted"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="92" height="135" viewbox="51 -56 92 135"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="141" y1="77" x2="51" y2="-56"></line><line stroke="#000000" stroke-width="4" stroke-dasharray="0 7.779413498228335" stroke-linecap="round" x1="141" y1="77" x2="51" y2="-56"></line><path style="fill: rgba(0,0,0,0);" stroke="#000000" stroke-width="4" transform="translate(141,77) rotate(-34.274)" d="M -9 -9 L 0 0 L 9 -9"></path></svg></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 412px; height: 227px; left: 499px; top: 369px;" data-block-id="22737f44f319a09ad769bec6a12c97c9"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 17;"><pre class="yaml"><code>Melnor RainCloud View:
+  name: Sprinklers
+  view: yes
+  icon: mdi:water-pump
+  entities:
+    - binary_sensor.faucet001_status
+    - binary_sensor.rainbridge_status
+</code></pre></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="8de9d6f27530da904edbe9abd7d908a5"><div class="sl-block" data-block-type="text" style="height: auto; width: 292px; left: 574px; top: 14px;" data-block-id="4d62cfb6fa0567a8c6ee2864c01a5b03"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">DATABASES</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="cff3bea161d11af4225e6bb8e83634ef"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 786px; height: 152px; left: 80px; top: 178px;" data-block-id="2a3ee7629053977a751801f6adb3fa99"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 13;"><pre class="yaml"><code>#configuration.yaml
+recorder:
+  purge_days: 7
+  db_url: mysql://hass_uSeR:6Rg3fZzK8@hass.home/home_assistant_history_db
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 711px; left: 69px; top: 60px;" data-block-id="bb297a060fb5792e8a9575f708f133b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<ul>
+	<li><span style="font-size:1.4em">Defaults to SQLite</span></li>
+	<li><span style="font-size:1.4em">SQLAlchemy as Object Relational Mapper (ORM)</span></li>
+	<li><span style="font-size:1.4em">Support for MariaDB and PostgreSQL</span></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 344px; height: 112px; left: 27px; top: 454px;" data-block-id="970e50ee92c96a14b4e13df9f19a7659"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="0"><img style="" data-natural-width="537" data-natural-height="175" data-lazy-loaded="" data-src="home-assistant-qecampx-1/5169faf49ae22cb7242fec1e590d4f2e.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 329px; height: 147px; left: 629px; top: 347px;" data-block-id="d1f8594457ce47511ada34ebd1fc8c22"><div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="2"><img style="" data-natural-width="329" data-natural-height="147" data-lazy-loaded="" data-src="home-assistant-qecampx-1/520ae7e4742baf102b7005dbed713979.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 221px; height: 255px; left: 392px; top: 394px;" data-block-id="bf7bf6de2a584edd8340199179fc7809"><div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="1"><img style="" data-natural-width="316" data-natural-height="365" data-lazy-loaded="" data-src="home-assistant-qecampx-1/704d8dcb3f97bba6ca08f01f77900b25.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="67ccb4f5b32e4d8b81251c82337b3f18"><div class="sl-block" data-block-type="text" style="height: auto; width: 386px; left: 494px; top: 15px;" data-block-id="eab4cf0294cc1007af9bc1539405b159"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">SENSORS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="ce81d564659cf2b9aec4b0effd234bd1"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 711px; left: 69px; top: 61px;" data-block-id="b3635e92ee66430351d01075e851548d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="5217f662-fe64-f90b-a5dd-3f24c8fd6f3e" data-gramm="true" data-gramm_editor="true" dir="ui">
+<p><span style="font-size:1.4em">+90 different sensors available</span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 891px; height: 143px; left: 33px; top: 109px;" data-block-id="3ddbca504ee6197312a969afb15f6f53"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 14;" data-fragment-index="2"><pre class="yaml"><code>- platform: command_line
+  name: "HD Amcrest Upload"
+  command: "df -h /archive/upload/ | awk -F' ' '{ print $5 }' | tail -n1 | sed 's/%//g'"
+  unit_of_measurement: "%" </code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 72px; height: 110px; left: 671px; top: 61px;" data-block-id="f53f27b638c559ec36428e279878f68c"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="3"><img style="" data-natural-width="67" data-natural-height="102" data-lazy-loaded="" data-src="home-assistant-qecampx-1/697f7a736fedf37dc68b43fcfd891820.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 287px; height: 121px; left: 17px; top: 290px;" data-block-id="fb61487fce8de7b98e8b408f1a9f19ce"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 16;" data-fragment-index="0"><pre class="yaml"><code>- platform: yahoo_finance
+  symbols:
+    - RHT
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 64px; height: 114px; left: 213px; top: 354px;" data-block-id="70ce8aeab43c089bd704e4c501fb9672"><div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="1"><img style="" data-natural-width="50" data-natural-height="89" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f73b5c62626ff146c0bbb61c128ec235.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 511px; height: 362px; left: 332px; top: 268px;" data-block-id="94c4f30688d82296f39304a495c3e438"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 18;" data-fragment-index="4"><pre class="yaml"><code>- platform: wunderground
+  api_key: !secret sensor_wunderground_api_key
+  pws_id: !secret sensor_wunderground_pws_id
+  monitored_conditions:
+    - weather
+    - temp_c
+    - heat_index_c
+    - dewpoint_c
+    - wind_kph
+    - UV
+    - precip_today_metric
+    - relative_humidity
+    - alerts
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 364px; height: 328px; left: 595px; top: 369px;" data-block-id="213555bc5378920d055c3282f290f474"><div class="sl-block-content fragment" style="z-index: 19;" data-fragment-index="5"><img style="" data-natural-width="424" data-natural-height="382" data-lazy-loaded="" data-src="home-assistant-qecampx-1/a2b8bc51b2e31aafcc0c0b3a811bbf89.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="c7fde96a37b8e4435e97976ff9bf3608"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="91e5db5560e668f2090979db40fb27e5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">BINARY_SENSORS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="6f70aa02f5f8ce275e3757a0fdf5315f"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 711px; left: 69px; top: 84px;" data-block-id="29d0cff4bd4d8d12e552f444ef06d104"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="5217f662-fe64-f90b-a5dd-3f24c8fd6f3e" data-gramm="true" data-gramm_editor="true" dir="ui">
+<p><span style="font-size:1.4em">+60 different binary sensors available</span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 312px; height: 140px; left: 25px; top: 140px;" data-block-id="f42bbfbc28dab76bb80ee2ecc543da9f"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 14;" data-fragment-index="2"><pre class="yaml"><code>- platform: ring
+  monitored_conditions:
+    - ding
+    - motion</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 137px; height: 121px; left: 200px; top: 220px;" data-block-id="bd9d763deb192d38fc21044b9b378af7"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="3"><img style="" data-natural-width="113" data-natural-height="100" data-lazy-loaded="" data-src="home-assistant-qecampx-1/acc5798c72a0f284f38dbf2f20f5e374.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 280px; height: 141px; left: 472px; top: 165px;" data-block-id="a272d9b6938e518ba33a47c93ad6198b"><div class="sl-block-style" style="z-index: 16; transform: rotate(360deg);"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 16;" data-fragment-index="4"><pre class="yaml"><code>- platform: ping
+  host: cdn.redhat.com
+  name: RHT CDN </code></pre></div></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 302px; height: 264px; left: 649px; top: 243px;" data-block-id="c89d04c465b9bfc5358886e2a22fdf27"><div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="5"><img style="" data-natural-width="302" data-natural-height="264" data-lazy-loaded="" data-src="home-assistant-qecampx-1/987fe5d01fe0acf2b7a927d4317f5e93.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 262px; height: 80px; left: 69px; top: 537px;" data-block-id="e3c2bb240ac20bdfb67b9cd05ab24e4c"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 18;" data-fragment-index="0"><pre class="yaml"><code>- platform: raincloud</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 175px; height: 94px; left: 288px; top: 473px;" data-block-id="8dac5c82c27f98668bd0a4b1c85fc1bb"><div class="sl-block-content fragment" style="z-index: 19;" data-fragment-index="1"><img style="" data-natural-width="156" data-natural-height="84" data-lazy-loaded="" data-src="home-assistant-qecampx-1/28c12ed54ed9fb8b1604f749b9a1ee03.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="095aa1b6dfbf63ad176a3a2fcb22567a"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="779f514116bcd0996aec46b5da72e5c7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">CAMERAS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="5c84657951521808981bab52b685b28a"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 711px; left: 69px; top: 87px;" data-block-id="828777ed0ad01ae63386ce385f05a224"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="5217f662-fe64-f90b-a5dd-3f24c8fd6f3e" data-gramm="true" data-gramm_editor="true" dir="ui">
+<p><span style="font-size:1.4em">Support to +35 different camera vendors</span></p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 947px; height: 125px; left: 7px; top: 123px;" data-block-id="791fc2cc2048dbb7fa644a4a4adb5b77"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 14; font-size: 105%;" data-fragment-index="0"><pre class="yaml"><code>- platform: generic
+  name: WundergroundRadar
+  still_image_url: 'http://icons.wxug.com/data/weather-maps/radar/charlotte.*snip*.gif'</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 356px; height: 258px; left: 604px; top: 221px;" data-block-id="5b948d747bbe97821964cf4caec2c746"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1"><img style="" data-natural-width="451" data-natural-height="327" data-lazy-loaded="" data-src="home-assistant-qecampx-1/7b6e228f88d0d0d209862d9e5f864aaf.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 489px; height: 136px; left: 454px; top: 524px;" data-block-id="697ce9a59684d2cc9cf6a99e761bd664"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 16;" data-fragment-index="2"><pre class="yaml"><code>- platform: arlo
+  ffmpeg_arguments: '-filter:v setpts=40.0*PTS'
+  ffmpeg_binary: '/usr/bin/ffmpeg'
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 270px; height: 457px; left: 69px; top: 230px;" data-block-id="4009d42ebbf8d85c80a9dee1ebaa7e61"><div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="3"><img style="" data-natural-width="405" data-natural-height="686" data-lazy-loaded="" data-src="home-assistant-qecampx-1/b940e6c210c3057edf269c5adee67a67.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="1c8ced448c503156f59cefe566b31c97"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="717ea1b381c40593aec3ca79e076bfe2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">INPUT_BOOLEANS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="622011410141b4d91c59757b9022279e"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 406px; height: 113px; left: 22px; top: 110px;" data-block-id="77e35ceb1e86f8e370d471bff1c08dee"><div class="sl-block-style" style="z-index: 13; transform: rotate(360deg);"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13;" data-fragment-index="0"><pre class="yaml"><code>allowed_garage_door_actions:
+  name: Allowed Garage Door Actions
+  initial: on</code></pre></div></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 417px; height: 36px; left: 463px; top: 140px;" data-block-id="571a12e7c937d94a498c34fd981de047"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="1"><img style="" data-natural-width="417" data-natural-height="36" data-lazy-loaded="" data-src="home-assistant-qecampx-1/d5d16d970f53873ee7b15e851d33705c.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 448px; left: 112px; top: 313px;" data-block-id="ba86c454642322a700d61e8c3210412c"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true" data-fragment-index="2">
+<h2>INPUT_SELECTS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 31px; top: 299px;" data-block-id="f40f379fd5bf7289958bdf857b6fcf0b"><div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="2"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 393px; height: 394px; left: 560px; top: 293px;" data-block-id="6236c4cd9d988a159d32e42ec387b161"><div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="4"><img style="" data-natural-width="393" data-natural-height="394" data-lazy-loaded="" data-src="home-assistant-qecampx-1/ac6f8a1d30ec692680451534489fd600.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 348px; height: 300px; left: 146px; top: 368px;" data-block-id="32e547c0fe78efbc1a51240cee1520a1"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 18;" data-fragment-index="3"><pre class="yaml"><code>scene_alice_bedroom:
+  name: Scenes Alice Bedroom
+  options:
+    - '--'
+    - 'Alice Blue'
+    - 'Alice Dimmed'
+    - 'Alice Fluorescent'
+    - 'Alice Halogen'
+    - 'Alice Red'
+    - 'Alice Red Night'
+  initial: '--'</code></pre></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="fb3de2d5de7c29b3903968832325a387"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="200d6c8acd7b1ca0387592e82a82c273"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">lights.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="bd7a56c3ae6185341d2ba49cc5827f2e"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 579px; height: 446px; left: 2px; top: 25px;" data-block-id="7bb79a2e09d868a8efe62684a1055465"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13;" data-fragment-index="0"><pre class="yaml"><code>- platform: hue
+  host: 192.168.100.18
+  allow_hue_groups: false
+
+- platform: flux_led
+  automatic_add: true
+
+- platform: tplink
+  host: 192.168.100.131
+  name: "Nightstand Lamp Renata"
+
+- platform: tplink
+  host: 192.168.100.132
+  name: "Nightstand Lamp Marcelo"
+
+- platform: osramlightify
+  host: 192.168.100.182
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 632px; height: 357px; left: 326px; top: 270px;" data-block-id="30fee24969db8ef4b797b116b8ca36d9"><div class="sl-block-content fragment fade-right" style="z-index: 14;" data-fragment-index="1"><img style="" data-natural-width="811" data-natural-height="458" data-lazy-loaded="" data-src="home-assistant-qecampx-1/5febcfa72e4312e15767f4d3e0e815ba.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="044f34bf7abdd0953041db3efc05885a"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="a94809e8cc59d9512e31251b4cbfd9ac"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">SCENES.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="5cc1bb131d27fcd777e5ce42351691c2"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 300px; left: 15px; top: 40px;" data-block-id="af65491d8449e919c244944c4e706379"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13;" data-fragment-index="0"><pre class="yaml"><code>name: Red Lounge
+entities:
+  switch.kitchen:
+    state: off
+  group.living_floor_lamp:
+    state: off
+  group.hue_colored_lights_no_bathroom:
+    state: on
+    brightness: 63
+    xy_color: [0.692, 0.308]
+    transition: 5</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 565px; height: 461px; left: 384px; top: 224px;" data-block-id="451662a633446dfccc9901ace703d4bf"><div class="sl-block-style" style="z-index: 14;"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 14;" data-fragment-index="1"><pre class="yaml"><code>name: Good Night
+entities:
+  input_boolean.loop_shower:
+    state: off
+  switch.kitchen:
+    state: off
+  switch.loft_lamp:
+    state: off
+  group.hue_colored_lights_no_island:
+    state: off
+  light.gardenspotrgb01:
+    state: off
+    transition: 15
+  light.island:
+    state: on
+    transition: 5
+    brightness: 45
+    xy_color: [0.4858, 0.4146]</code></pre></div></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="2c4f00d7df15e3898af66daaa0d05452"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="08e9b4f2efa0ab1ee3efa3aca1d7dd82"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">Zwave</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="c88edd807bf1dc46e1f797fa430354e0"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 341px; height: 223px; left: 583px; top: 88px;" data-block-id="6ab306a23d81613e746d37077832373b"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="479" data-natural-height="313" data-lazy-loaded="" data-src="home-assistant-qecampx-1/a125469aa871998993c71ecce5599fba.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 248px; left: 656px; top: 311px;" data-block-id="da88a58ad49692c539dfb0260d31702d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><strong>Zwave Scene Controller</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 484px; left: 30px; top: 97px;" data-block-id="daf3730928b340c6dc1c1c32a0d6d241"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-fragment-index="0">
+<h3>When the button #1 is pressed 1 time</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 522px; left: 29px; top: 326px;" data-block-id="14026a856019e8cd34b819f40645944b"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; white-space: normal;" data-fragment-index="3">
+<h3>DiMM Living room lights to watch movie</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 484px; left: 30px; top: 296px;" data-block-id="587b95e989d4626966fc1d04b892bae4"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;" data-gramm_id="a1cf183b-8456-96f7-90a9-72334222c1b7" data-gramm="true" data-gramm_editor="true" data-fragment-index="2">
+<h3>When the button #1 is pressed 2 times</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 484px; left: 30px; top: 127px;" data-block-id="df92fbfe949dc06e3d0323c3db4f01e8"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;" data-fragment-index="1">
+<h3>Turn on living room LIGHTS</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 522px; left: 29px; top: 490px;" data-block-id="6fe02a010ed7caccf737b486f584ea0b"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; white-space: normal;" data-fragment-index="5">
+<h3>Turn OFF LIVING ROOM LIGHTS</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 484px; left: 30px; top: 460px;" data-block-id="6b3ab0f8f4bf03c70a5784923aec5b6e"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20;" data-gramm_id="a1cf183b-8456-96f7-90a9-72334222c1b7" data-gramm="true" data-gramm_editor="true" data-fragment-index="4">
+<h3>When the button #1 is LONG pressed</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 220px; height: 220px; left: 677px; top: 372px;" data-block-id="17a6a3a425eaf9ca4e306bab89a96200"><div class="sl-block-content" style="z-index: 21;"><img style="" data-natural-width="220" data-natural-height="220" data-lazy-loaded="" data-src="home-assistant-qecampx-1/a5e81bd0d8ce28f130d194222f07ccfc.jpg"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 248px; left: 701px; top: 592px;" data-block-id="746ac28d348b0d0e06788767d01eaad0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22;">
+<p><strong>Zwave USB Stick</strong></p>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="114b08e0f06794674ef7726d16c4c592"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="d00bd63cad19943ecf39c44b2231b235"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">EMULATED_HUE</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="3b7fce5e95b4e4677a178cc71c0cf942"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 370px; height: 236px; left: 55px; top: 55px;" data-block-id="b3d828c2b1c6ab00bc44ad8e24deeed1"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13;" data-fragment-index="0"><pre class="yaml"><code>emulated_hue:
+  type: alexa
+  listen_port: 8300
+  expose_by_default: false
+  off_maps_to_on_domains:
+    - script
+    - scene
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 749px; height: 491px; left: 199px; top: 201px;" data-block-id="1af0fc0465f53bf4da63c916ddf214e6"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="1"><img style="" data-natural-width="1079" data-natural-height="707" data-lazy-loaded="" data-src="home-assistant-qecampx-1/a585e48b408a36a5f508eb2aa2596b53.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 435px; left: 513px; top: 116px;" data-block-id="164c05803b979e3b6a3d88ea8705e786"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<ul>
+	<li>Support Amazon Echo and Google Home</li>
+</ul>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="b000bc07d7cc29ce2d1af4a00226dbd8"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="11d9fe2b909308288fdbbc03c90a81da"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">SCRIPTS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="fb4312a0442b543ac6f7bde9d6770c95"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 637px; height: 483px; left: 13px; top: 55px;" data-block-id="8e122af4ed5a8ce251fb95eb558984f2"><div class="sl-block-style" style="z-index: 13; transform: rotate(360deg);"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13;" data-fragment-index="0"><pre class="yaml"><code>send_snapshot_telegram_backyard:
+  alias: 'Send snapshot backyard camera'
+  sequence:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id:  input_boolean.on_motion_backyard
+          state: 'on'
+
+    - service: notify.TeleBot
+      data:
+        title: "Backyard Motion"
+        message: "There is a motion detected on the backyard"
+        data:
+          photo:
+            - url: !secret amcrest_backyard_snapshot_url
+              authentication: 'digest'
+              username: !secret amcrest_backyard_username
+              password: !secret amcrest_backyard_password</code></pre></div></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 291px; height: 518px; left: 630px; top: 130px;" data-block-id="faac1678bb092846cb6baadbec09ecc9"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="1"><img style="" data-natural-width="759" data-natural-height="1350" data-lazy-loaded="" data-src="home-assistant-qecampx-1/4e50f469086ff1c319379bb2fb71cd6e.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="750e1075d4d09e02ac5e8bd859918f05"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="05ebe7c0842e7cd9ac56b7bc5c10e880"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">SHELL_COMMANDS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="10d8dc2d0df252b6f5c0174a294feffc"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 940px; height: 222px; left: 7px; top: 69px;" data-block-id="4118fe1811dba17553d21eabbad01c60"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13; font-size: 88%;" data-fragment-index="0"><pre class="yaml"><code>#### Garage PTZ controls
+fdtptz_garage_goto_preset1: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 1
+fdtptz_garage_goto_preset2: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 2
+fdtptz_garage_goto_preset3: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 3
+fdtptz_garage_goto_preset4: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 4
+fdtptz_garage_goto_preset5: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 5
+fdtptz_garage_goto_preset6: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 6
+fdtptz_garage_goto_preset7: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 7
+fdtptz_garage_goto_preset8: /home/hass/.homeassistant/automation.conf.d/scripts/fdt_ptz-control.py 8</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 940px; height: 175px; left: 7px; top: 302px;" data-block-id="f4644d628c59b279f9516c4f70a27888"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 14; font-size: 70%;" data-fragment-index="1"><pre class="yaml"><code>#alice bedroom
+amcrestcam2_motion_on:  /home/hass/.virtualenvs/home_assistant/bin/amcrest-cli --camera amcrestcam2 --motion-detection true
+amcrestcam2_motion_off: /home/hass/.virtualenvs/home_assistant/bin/amcrest-cli --camera amcrestcam2 --motion-detection false
+amcrestcam2_goto_preset_crib: /home/hass/.virtualenvs/home_assistant/bin/amcrest-cli --camera amcrestcam2 --ptz-goto-preset 0 1
+amcrestcam2_goto_preset_crib_zoom: /home/hass/.virtualenvs/home_assistant/bin/amcrest-cli --camera amcrestcam2 --ptz-goto-preset 0 4
+amcrestcam2_goto_preset_roomview: /home/hass/.virtualenvs/home_assistant/bin/amcrest-cli --camera amcrestcam2 --ptz-goto-preset 0 2
+amcrestcam2_goto_preset_nursechair: /home/hass/.virtualenvs/home_assistant/bin/amcrest-cli --camera amcrestcam2 --ptz-goto-preset 0 3
+amcrestcam2_goto_preset_mattress_zoom: /home/hass/.virtualenvs/home_assistant/bin/amcrest-cli --camera amcrestcam2 --ptz-goto-preset 0 5
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 322px; height: 236px; left: 625px; top: 455px;" data-block-id="d0b16c9e3c5da76b35ff7a63c6c225f1"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="2"><img style="" data-natural-width="381" data-natural-height="279" data-lazy-loaded="" data-src="home-assistant-qecampx-1/ef36b490a9c63e726fa9c946e8acb790.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 596px; height: 151px; left: 7px; top: 498px;" data-block-id="268fcc08006df593c6c80508022e6344"><div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="3"><img style="" data-natural-width="596" data-natural-height="151" data-lazy-loaded="" data-src="home-assistant-qecampx-1/a0efaa90015bb002ddd4962f358b65c3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 61px; height: 61px; left: 523px; top: 507px;" data-block-id="b0c0dc49281415c8f08f39e91ca9f5dd"><div class="sl-block-style" style="z-index: 17; transform: rotate(340deg);"><div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="3"><img style="" data-natural-width="256" data-natural-height="256" data-lazy-loaded="" data-src="home-assistant-qecampx-1/e2c5e0e82383acdb6a8437a547b784c7.png"></div></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="61206d096bc83301930c8bade0f27f88"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="0c05e7178b5b5a080764dc5d6ed95df0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">...SHELL_COMMANDS.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="f001a727de4265f6b5e607c650847f66"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 945px; height: 637px; left: 8px; top: 63px;" data-block-id="2bb192ad4d757c2a6063829c13635853"><div class="sl-block-style" style="z-index: 13;"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 13; font-size: 86%;"><pre class="python"><code># fdt_ptz-control.py
+def run_query(scope, verbose=True, show_url=False):
+    url = "http://{0}/cgi-bin/hi3510/param.cgi?cmd={1}&amp;-usr={2}&amp;-pwd={3}".format(
+            HOSTNAME, scope, USERNAME, PASSWORD)
+
+    req = requests.get(url)
+    if req.ok and req.status_code == 200:
+        if verbose:
+            print(scope)
+            if show_url:
+                print(url)
+            print('-' * len(scope))
+            print(req.text)
+
+def goto_preset(position, verbose=True, show_url=False):
+    if isinstance(position, int):
+        if position &gt; 0 and position &lt;= 8:
+            # preset position starts on 0
+            cmd = "preset&amp;-act=goto&amp;-number={}".format(position - 1)
+            run_query(cmd, verbose, show_url)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='FDT PTZ Control camera wrapper')
+    parser.add_argument('preset', type=int, help='PTZ Preset [1-8]')
+    args = parser.parse_args()
+
+    if args.preset:
+        goto_preset(args.preset, verbose=False, show_url=False)
+</code></pre></div></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="f5bc7c4f969669301958eeb5fea9a640"><div class="sl-block" data-block-type="text" style="height: auto; width: 820px; left: 61px; top: 15px;" data-block-id="b44d7efbad624541fe1f70fe80e32d06"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">SHELL COMMANDS+ SCRIPTS</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="b2246a3c836ebc0790096a78425f2dab"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 606px; height: 570px; left: 17px; top: 70px;" data-block-id="d445d06828c0b17abcb29059fc720541"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 13;"><pre class="yaml"><code>fdtptz_garage_goto_scan:
+  alias: 'Scan Loop'
+  sequence:
+    - delay:
+        seconds: 15
+
+    - service: shell_command.fdtptz_garage_goto_preset1
+
+    - delay:
+        seconds: 10
+
+    - service: shell_command.fdtptz_garage_goto_preset7
+
+    - delay:
+        seconds: 10
+
+    - service: shell_command.fdtptz_garage_goto_preset1
+
+    - delay:
+        seconds: 10
+
+    - service: shell_command.fdtptz_garage_goto_preset3</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 389px; height: 219px; left: 569px; top: 280px;" data-block-id="2f6124df2deb90b131dde829301a45aa"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1280" data-natural-height="720" data-lazy-loaded="" data-src="home-assistant-qecampx-1/af6c43f0ea746d24eb70c6f90e8e5945.jpg"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="15386b312486aabfbf3dae3ccd177c15"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="b2710ee9ad0a7eb0e39c2ecbd2a5e7d8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">Climate.YAML</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="dae3ccb38784362129656ffc4e234ce2"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 450px; height: 169px; left: 452px; top: 111px;" data-block-id="4236ed4d447ff7b9da494ba699717f4e"><div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1"><img style="" data-natural-width="450" data-natural-height="169" data-lazy-loaded="" data-src="home-assistant-qecampx-1/d574764f5ffb9c1a30a6185d244c1060.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 292px; height: 518px; left: 64px; top: 63px;" data-block-id="c7ec49bb58cb44fb19e13e48302e105d"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="2"><img style="" data-natural-width="307" data-natural-height="545" data-lazy-loaded="" data-src="home-assistant-qecampx-1/b70caf4b66743380f7525adc6b975e66.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 311px; height: 144px; left: 489px; top: 365px;" data-block-id="51b3f747850f1918688f5caedc02b504"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 15;" data-fragment-index="0"><pre class="yaml"><code># climate.yaml
+platform: nest # via oauth2</code></pre></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="ea6ff3a0b8ac66c29d28d7a02f57bfb8"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="148f6a80252a37a612a5faf10edc1997"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">media_players.yaml</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="920a4436f81e628ef8d8c446cdd55d24"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 498px; height: 368px; left: 11px; top: 63px;" data-block-id="2c4abfce049026315081dfca268d64a3"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13;" data-fragment-index="0"><pre class="yaml"><code>- platform: spotify
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret
+
+- platform: cast
+  host: 192.168.100.162
+
+- platform: samsungtv
+  host: 192.168.100.17
+  name: Living Room TV
+
+- platform: roku
+
+- platform: pandora</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 389px; height: 441px; left: 535px; top: 92px;" data-block-id="8e3de9d37a7accc882878882eca3fa67"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="1"><img style="" data-natural-width="460" data-natural-height="521" data-lazy-loaded="" data-src="home-assistant-qecampx-1/c9793e7c43a1deca940362e37b8798f4.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 271px; height: 379px; left: 250px; top: 280px;" data-block-id="35338eb3f32379e42cc5af240e6dabe9"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="2"><img style="" data-natural-width="333" data-natural-height="465" data-lazy-loaded="" data-src="home-assistant-qecampx-1/7a75aef7d6c0682cbcf56d640f9fe7bb.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="e21d517d9a9851d0ee674a9623283e97"><div class="sl-block" data-block-type="text" style="height: auto; width: 576px; left: 305px; top: 17px;" data-block-id="24dca202ac6f9201b4345f35b22fd1fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">ZONES</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="b5b3315f71065a1dc0820d2b328a0e77"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 396px; height: 359px; left: 2px; top: 15px;" data-block-id="0437c15e541cd4d8288192e9ed1c59e3"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 12;" data-fragment-index="0"><pre class="python"><code>zone:
+  name: Home
+  latitude: 35.7654610
+  longitude: -78.7379918
+  radius: 100
+  icon: mdi:castle
+
+zone 2:
+  name: RedHat
+  latitude: 35.7754699
+  longitude: -78.6379913
+  radius: 300
+  icon: mdi:worker
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="width: 684px; height: 460px; left: 251px; top: 170px;" data-block-id="5c7a0d91d263edfd816f4716197161c0"><div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1"><img style="" data-natural-width="750" data-natural-height="504" data-lazy-loaded="" data-src="home-assistant-qecampx-1/ad744a8204a3e4e96cac1da5fe7d3d92.png"></div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="c803192561934a3b3acf64ec61e7613a"><div class="sl-block" data-block-type="text" style="height: auto; width: 292px; left: 574px; top: 14px;" data-block-id="09fef4eb486e53c7f72baee60b2244a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">MQTT</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="51bcba38888996e0d703c47aba47120d"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="code" style="width: 958px; height: 356px; left: 0px; top: 96px;" data-block-id="35f69320caf90c5dcf7aef00364ea747"><div class="sl-block-content" data-highlight-theme="ascetic" style="z-index: 13;"><pre class="yaml"><code>#configuration.yaml
+mqtt:
+  broker: !secret mqtt_broker  # if options are bypassed, it will use the embedded MQTT broker
+  port: !secret mqtt_port
+  client_id: !secret mqtt_client_id
+  keepalive: !secret mqtt_keepalive
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  certificate: !secret mqtt_certificate
+  client_cert: !secret mqtt_client_cert
+  client_key: !secret mqtt_client_key
+  protocol: !secret mqtt_protocol</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 711px; left: 24px; top: 60px;" data-block-id="8bf2d468c5522741c5287332ae892876"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-gramm_id="bd9aaad5-119f-8a2a-20ce-a97ff718c4eb" data-gramm="true" data-gramm_editor="true">
+<p><span style="font-size:1.4em">Running my own Mosquitto Server</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 426px; left: 591px; top: 239px;" data-block-id="acc20bedaddba1b5eedbba6ea0b6681a"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="332" data-natural-height="589" data-lazy-loaded="" data-src="home-assistant-qecampx-1/35c7f65678a8604b2f399387f00ffa4a.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 179px; top: 539px;" data-block-id="738465c2d401ea681233f6623275b81c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p><strong><span style="font-size:1.6em">http://owntracks.org/</span></strong></p>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="9a24e8df5414b0286b14ec75b5d46288"><div class="sl-block" data-block-type="text" style="height: auto; width: 292px; left: 574px; top: 14px;" data-block-id="8b9e0bc3debc1364337ef45235cf6eb1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right">MQTT</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 890px; top: 0px;" data-block-id="1a43f1d24f95508187f03f7c5d9ad2a5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 326px; height: 321px; left: 18px; top: 21px;" data-block-id="9c9bc469459a0440ad82f05731182502"><div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0"><img style="" data-natural-width="326" data-natural-height="321" data-lazy-loaded="" data-src="home-assistant-qecampx-1/185cc9b404abbb266c71791d705718c9.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 246px; height: 357px; left: 357px; top: 203px;" data-block-id="d6bd68b2b22f44460440184b365d9197"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="2"><img style="" data-natural-width="331" data-natural-height="480" data-lazy-loaded="" data-src="home-assistant-qecampx-1/d57258cbbb901c8e1922306cdd1342b2.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 256px; height: 191px; left: 53px; top: 408px;" data-block-id="11df117784dfa8e4da12a21f8963941c"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="1"><img style="" data-natural-width="256" data-natural-height="191" data-lazy-loaded="" data-src="home-assistant-qecampx-1/df70cee4e49460ca54d98b40bfc084b4.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 214px; height: 492px; left: 710px; top: 162px;" data-block-id="b4ecde1c1f00018c2c74a4b3173489a8"><div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="4"><img style="" data-natural-width="214" data-natural-height="492" data-lazy-loaded="" data-src="home-assistant-qecampx-1/79f482b6d8cfca4ee0aa1263b7361b4e.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 276px; left: 656px; top: 104px;" data-block-id="2639d9d7f67d0f14d426850ed97fe6d5"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;" data-fragment-index="3">
+<p><span style="font-size:1.4em">And much more.....</span></p>
+</div></div></section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="900561ad1501561cafb6ec89cba602c6"><div class="sl-block" data-block-type="text" style="height: auto; width: 292px; left: 582px; top: 4px;" data-block-id="31ecadd268f93094d2ec14959923918b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="f682cb54-3650-6935-5be8-de17582c6422" data-gramm="true" data-gramm_editor="true">
+<h2 style="text-align:right"><span style="font-size:0.9em">MQTT Automation</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 68px; height: 69px; left: 888px; top: 1px;" data-block-id="b9903d01846d051f11e53af11f742ced"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 608px; height: 598px; left: 1px; top: 1px;" data-block-id="fef42621e6adcb4c2752d409fed3354c"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 13; font-size: 87%;" data-fragment-index="0"><pre class="yaml"><code># automations.yaml
+- alias: 'Actions when mmello arrives Home'
+  initial_state: 'on'
+  trigger:
+    - platform: zone
+      entity_id: device_tracker.owntracks_mmello_nexus6
+      zone: zone.home
+      event: enter
+  condition:
+    condition: and 
+    conditions:
+      - condition: state
+        entity_id: input_boolean.allowed_garage_door_actions
+        state: 'on'
+
+     - condition: state
+        entity_id: device_tracker.mmello_nexus6
+        state: 'not_home'
+
+      - condition: time
+        after: '09:00'
+        before: '22:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.cars_arrival_actions</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 591px; height: 337px; left: 364px; top: 361px;" data-block-id="15bf8bf6564d5531a7e22077e95090cd"><div class="sl-block-content fragment" data-highlight-theme="ascetic" style="z-index: 14; font-size: 96%; border-style: solid; border-width: 4px;" data-fragment-index="1"><pre class="yaml"><code>#scripts.yaml
+cars_arrival_actions:
+  alias: "Actions upon car arrival"
+  sequence:
+    - service: alarm_control_panel.alarm_disarm
+      data: {"code":"secret123"}
+
+    - service: script.turn_on
+      data:
+        entity_id: script.open_garage_door_if_away
+
+    - service: lock.unlock
+      data: {"entity_id": "lock.schlage_fe599gr_door_lock"}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 310px; height: 175px; left: 630px; top: 148px;" data-block-id="4a1f7100c3229bef89d9a4aabbf4ae67"><div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="2"><img style="" data-natural-width="644" data-natural-height="364" data-lazy-loaded="" data-src="home-assistant-qecampx-1/97b225f34b1039af5006c1edf26e0543.png"></div></div>
+</section><section class="transition-slide transition-zoom-in transition-slide-up" data-background-color="#079cd5" data-id="e4dad76d32a505e3a38d63b70f362d1c">
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 260px; top: 110px;" data-block-id="cab2dfae372b07b1c6140d3c2d4fb716"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h1>THANK YOU!!!</h1>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 176px; height: 178px; left: 392px; top: 236px;" data-block-id="14f5b675cfe32ab6f8b1fb6e2af954dc"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="207" data-natural-height="209" data-lazy-loaded="" data-src="home-assistant-qecampx-1/f95054fff59f0ec7c78ee7836035dd39.png"></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1099656,"slug":"home-assistant-qecampx-1","title":"Home Assistant (public version)","description":"Home Assistant presentation performed at QE CampX RDU.","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/675dbbef1e3b6cb0b545f028fed8b76d/thumb.jpg?1508692055","view_count":0,"user":{"id":646905,"username":"mdemello","name":"Marcelo Moreira de Mello","description":"","thumbnail_url":"https://www.gravatar.com/avatar/744069164c9716d127d40fce2a62c09e?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":32,"settings":{"id":495117,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true},"enterprise":true,"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"none","transition":"none","theme_id":176,"theme_font":"overpass2","theme_color":"no-color","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1508692055588,"font_typekit":null,"font_google":null,"notes":{"d5fe3ab492384dc23e8f9ef06e09a713":"Talk about how the configuration maps together\n"}}};
+
+				SLConfig.theme = {"id":176,"created_at":"2014-05-27T12:38:16.183Z","updated_at":"2017-10-10T08:48:29.371Z","name":"Red Hat Corporate","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/66755080be2b0c8c0146bfa70069ef16/thumb.jpg?1507625308","sanitize_messages":null,"slide_template_ids":[56708,56706,56689,28642,36442,27160,26765,26762,56684,56696,56697,56698,56699,56704,56703,56707],"font_typekit":"","font_google":"","width":960,"height":700};
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				loop: false,
+				rtl: false,
+
+				transition: "none",
+				backgroundTransition: "none",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+  <script id="theme-js-output" type="text/javascript">var themeHTMLOutput = document.getElementById('theme-html-output');
+if( themeHTMLOutput ) {
+    themeHTMLOutput.innerHTML = '<link  rel="stylesheet" href="https://overpassmonotest-30e2.kxcdn.com/overpass-mono.css" />';
+}
+
+// (function() {
+// 
+//   var slidesInitInterval = setInterval( function() {
+//     if( window.SL && window.SL.view ) {
+//       // If we're in the editor, wait for the Blocks controller
+//       // to be initialized
+//       if( SL.editor ) {
+// 
+//         if( SL.editor.controllers && SL.editor.controllers.Blocks && SL.editor.controllers.Blocks.textSaved ) {
+//           SL.editor.controllers.Blocks.textSaved.add( function( element ) {
+//             var html = element.html();
+//             html = html.replace( /(@RedHat | @redhat)/g,                 '@redhat' );
+//             html = html.replace( 'redhat.com',                 'redhat.com' );
+//             html = html.replace( /(Red Hat|red hat|RedHat|Red hat|Redhat|redHat|red Hat)/g,  '<span class="name">Red Hat</span>' );
+//             html = html.replace( /( redhat |redhat )/g,  ' <span class="name">Red Hat</span> ' );
+//             html = html.replace( 'REDHAT',                    '<span class="name">RED HAT</span>' );
+//             html = html.replace( 'redhat<',                    '<span class="name">Red Hat</span><' );
+//             html = html.replace( 'openshift',                 '<span class="name">OpenShift</span>' );
+//             html = html.replace( '<span class="name"><span class="name">Red Hat</span></span>',                    '<span class="name">Red Hat</span>' );
+//             html = html.replace( 'redhat.com',                 'redhat.com' );
+//             html = html.replace( 'REDHAT.COM',                 'REDHAT.COM' );
+//             html = html.replace( '@redhat',                 '@redhat' );
+//             html = html.replace( /(@RedHatNews | @redhatnews)/g,                 '@RedHatNews' );
+//             html = html.replace( /(@RedHat | @redhat)/g,                 '@RedHatInc' );
+//             html = html.replace( /(RHEL-OSP|RHELOSP|Red Hat Enterprise Linux OpenStack Platform)/g,                 'Red Hat OpenStack Platform' );
+//             html = html.replace( /(openstack |openstack|open stack|openStack|Openstack)/g,                 'OpenStack' );
+//             html = html.replace( 'openstack',                    'OpenStack' );
+//             html = html.replace( 'openstack<',                    'OpenStack<' );
+// 
+//             element.html( html );
+//           } );
+// 
+//           clearInterval( slidesInitInterval );
+//         }
+// 
+//       }
+//       else {
+//         clearInterval( slidesInitInterval );
+//       }
+//     }
+//   }, 500 );
+// 
+// })();
+
+
+
+// piwik script
+var _paq = _paq || [];
+_paq.push(["trackPageView"]);
+_paq.push(["enableLinkTracking"]);
+
+(function() {
+var u = (("https:" == document.location.protocol) ? "https" : "http") +
+"://engstats.redhat.com/piwik/";
+_paq.push(["setTrackerUrl", u+"piwik.php"]);
+_paq.push(["setSiteId", "8"]);
+var d=document, g=d.createElement("script"),
+s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+})();
+
+
+
+ 
+function sliceString(selector) {
+    var elements = document.getElementsByClassName(selector);
+
+ 
+    for (var h=0; h<elements.length; h++){
+      var string = elements[h].innerText,
+          total = string.length,
+          div = '';
+
+// futile attempt to clean space
+var string = elements[h].innerText.trim();
+     
+      for (var i=0; i<total;  i++) {
+        var letter = string.charAt(i);
+        div+= '<span class="'+letter+'">'+letter+'</span>';
+      }
+      elements[h].innerHTML = div;
+    }        
+}
+sliceString('lettering');
+sliceString('lettering'); //no rogue spaces when fired twice for some reason
+
+
+
+// function sliceString(selector) {
+//    if (!document.querySelector) return;
+//    var string = document.querySelector(selector).innerText,
+//        total = string.length,
+//        html = '';
+//    for (var i=0; i<total; i++) {
+//        var letter = string.charAt(i);
+//        html+= '<span class="'+letter+'">'+letter+'</span>';
+//    }
+//    document.querySelector(selector).innerHTML = html;
+//}
+//sliceString('.lettering');</script>
+
+	</body>
+</html>
