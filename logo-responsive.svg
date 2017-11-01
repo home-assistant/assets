@@ -24,7 +24,7 @@
       }
     }
     
-    @media all and (max-width: 30px) {
+    @media all and (max-width: 34px) {
       #house_small_tree {
         fill: #40BDF5;  
         transform: scale(1.25);
