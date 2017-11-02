@@ -3,7 +3,6 @@
   <title>home-assistant-logo-responsive</title>
   <style>
     svg * {
-      transition: fill .1s ease-out, opacity .1s ease-out;
     }
     
     .only-on-small { opacity: 0; }

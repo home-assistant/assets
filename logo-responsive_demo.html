@@ -1,14 +1,22 @@
 <html>
 <head>
-  <style type="text/css">
-    #responsive_logo {
-      margin: 300px;
+  <style type="text/css">			
+    .container {
+      border: 1px solid #b6bdc3;
+      padding: 10px;
+      background: #fff;
+      margin: 250px;
     }
-  
-  
-  
+
+    /* Required to make image fluid in IE */
+    img:not(.png) {
+      width: 100%;
+    }				
+					
   </style>
 </head>
 <body>
- <img id="responsive_logo" src="logo-responsive.svg"></svg>
+  <div class="container">
+    <img id="responsive_logo" src="logo-responsive.svg"></svg>
+  </div>
 </html>
