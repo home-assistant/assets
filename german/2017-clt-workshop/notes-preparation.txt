@@ -1,0 +1,24 @@
+Home Assistant Workshop CLT 2017
+================================
+
+OpenStack
+---------
+
+Host: 192.168.0.181
+
+ha[n] - 192.168.0.20[n]
+
+- Small, 10 GB, 1 GB, 1 CPU, Fedora 25 Cloud, Floating IP
+
+
+Live USB keys
+-------------
+
+Overlay: approx. 8 GB
+
+$ sudo livecd-iso-to-disk --reset-mbr --format --overlay-size-mb 8192 /home/fab/Downloads/Fedora-Workstation-Live-x86_64-25-1.3.iso /dev/sdb
+
+Requires `livecd-tools`
+
+$ dnf -y install livecd-tools
+
