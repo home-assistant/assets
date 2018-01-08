@@ -19,11 +19,11 @@ draussen dunkel wird und jemand zu Hause ist.
 
 Es besteht eine breite Unterstützung für Geräte, wie Hubs, Kamera, HiFi-
 Komponenten und Fernseher, mechanische Schlösser, Tore und Türen, Kalender
-oder Staubsauger, welche sich im Handel kaufen lassen. Unter den fast 500
+oder Staubsauger, welche sich im Handel kaufen lassen. Unter den fast 1000
 Integrationen sind jedoch auch Web-Dienste für Wetter, Börsen-Informationen
 oder des öffentlichen Verkehrs, Sprachsteuerung und Text-to-speech vorhanden.
 Anwender haben die Wahl von unterschiedlichsten Typen von Benachrichtigungen,
-welche sie über Ereignisse und Zustände in deinem Heim informieren.
+welche sie über Ereignisse und Zustände in ihrem Heim informieren.
 
 Die Automatisierung liefert die Funktionalität, um auf Änderungen mit Aktionen
 zu reagieren. Digitale, numerische und zeit- oder standort-basierende Auslöser
@@ -38,17 +38,24 @@ der Apache 2.0-Lizenz.
 Workshop-Details
 ----------------
 Der Workshop befasst sich nach einer kurzen und allgemeinen Einführung aus-
-schliesslich mit dem Thema des Schreibens von Erweiterungen für Home Assistant.
+schliesslich mit dem Thema des Erstellen von Erweiterungen für Home Assistant.
 Installation, Konfiguration und Einrichtung wurden ausgiebig im Workshop 2017
-behalndelt.
+behandelt.
 
-Die Teilnehmer werden Schritt für Schritt mit den Möglichkeiten vertraut ge-
-macht. Nach der ersten Platform für einen Sensor und einen Schalter wird es
-weitergehen mit einer komplexeren Komponente, welche andere Elemente auto-
-matisch einrichtet und die Kommunikation mit der Hardware regelt.
+Die Teilnehmer werden Schritt für Schritt mit den Möglichkeiten von Home
+Assistant zum Einbinden vom Hardware und Web-Diensten vertraut gemacht. Nach
+der ersten gemeinsam erarbeiteten Platform für einen Sensor und einen
+Schalter wird es weitergehen mit einer komplexeren Komponente, welche andere
+Elemente automatisch einrichtet und die Kommunikation mit der Hardware regelt.
 
-Das Ziel ist, dass die Teilnehmer befähigt werden, eigene Intregrationen zu
-schreiben, die nach Möglichkeit in Home Assistant integriert werden können.
+Im letzten Teil des Workshops werden sich die Teilnehmer bereits an ihre erste
+eigene Sensor-Platform wagen. Abgerundet wird der Workshop mit Details zum 
+Testen des Codes und der Vorbreitung zum Hinzufügen zu Home Assistant.
+
+Das Ziel des Workshops ist, dass die Teilnehmer befähigt werden, eigene
+Intregrationen zu schreiben, die in Home Assistant integriert werden können.
+Sei es für Anforderungen, welche mit den verfügbaren Integrationen nicht ab-
+gedeckt werden oder für noch nicht unterstützte Hardware.
 
 Vorkenntnisse
 -------------
@@ -56,7 +63,7 @@ Grundkenntnisse in Linux, Programmierung und der Nutzung der Kommando-Zeile.
 Die Unterlagen (Teil 1 und Teil 2) des letztjährigen Workshop enthalten
 wertvolle Informationen.
 Python-Kenntnisse von Vorteil, aber nicht zwingend, da es Zeit haben wird für
-den einen oder andern Exkurs in die Nutzung von Python. 
+den einen oder andern Exkurs in die Nutzung dieser Programmiersprache. 
 
 Weiteres
 --------
