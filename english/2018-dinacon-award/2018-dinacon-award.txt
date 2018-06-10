@@ -1,0 +1,166 @@
+DINAcon award
+=============
+
+Official Project Name *
+The official name of the project.
+
+Home Assistant
+
+Project Abstract *
+Please describe your project with a short abstract.
+
+With Home Assistant is a Python 3 home automation system available which let you track the state of all the devices in your home, so you don't have to. Home Assistant allows you to control all your devices without storing any of your data in the cloud from a single, mobile-friendly, interface. The short release cycle of Home Assistant ensures that you can profit instantly from new features. Often you will be the first ones who get support for a brand-new "smart thing". Currently there are over 1000 integration available which will allow you to automate your home with simple rules.
+
+
+Contact Name *
+Please give us your full name.
+
+Fabian Affolter
+
+Contact E-Mail *
+
+fabian@affolter-engineering.ch
+
+Part of Project? *
+Are you part of the project?
+
+Yes, I'm part of the project
+
+
+Project Logo
+Please provide the logo of your project.
+
+
+Project Files
+Please provide screenshots, code snippets or other data that describes your project in some visual way aside from the description.
+
+
+
+Project Links
+Please provide any further links that help us to get a good overview of your project. This can be:
+
+Website and documentation: https://home-assistant.io
+Developer documentation: https://developers.home-assistant.io/
+Forum: https://community.home-assistant.io
+Facebook: https://www.facebook.com/homeassistantio/
+Google+: https://plus.google.com/u/0/b/110560654828510104551/communities/106562234893511202708
+Twitter: https://twitter.com/home_assistant
+Discord: https://discord.gg/c5DvZ4e
+Reddit: https://www.reddit.com/r/homeassistant/
+
+Project Maturity *
+How mature is your project? Still in the early stages or already a rock-solid solution?
+
+There is a vivid community of users and contributors
+
+
+Project Start *
+When was the project started?
+
+September 2013
+
+Project License
+Under which license is your project licensed?
+
+OSI/FSD-approved free software license
+
+ASL 2.0
+Dual-licensed (please describe below)
+CC-BY-*
+Other
+
+Contributor Agreement *
+Does one need to sign a contributor agreement?
+
+Yes
+
+
+Number of Contributors
+How many different contributors did contribute to the project within the last 12 months?
+
+Only main repo
+
+git log --pretty="%an %ae%n%cn %ce" --after="2017/6/9" --until="2018/6/9" | sort | uniq | wc -l
+
+686
+
+Project Commits
+How many commits did your project receive within the last 12 months? Projects not having a version control system (e.g. Open Data projects or similar) can also specify changesets or similar.
+
+git log --after="2017/6/9" --until="2018/6/9" --pretty=format:'' | wc -l
+
+Main repo: 3963
+Frontend repo: 784
+JS repo: 14
+Docs repo: 3695
+Devel docs repo: 71
+Hass.io repo: 410
+Hassos repo: 175
+
+Going to skip the build and helper repos, the Add-on repos and other thing we obsoleted.  
+
+Project Fork
+Was this project forked (splitted into different communities) in the past or is this project a fork of an other project? 
+
+Not forked.
+
+
+Project Repo Metrics
+If your project is based on a (public) GitLab instance, on Github, on Bitbucket, etc. that offers a metric like "followers" or "likes", what is the metric of your project.
+
+Total stars (of the most important repos): 17.5 k
+Total forks (of the most important repos): 7 k
+
+
+
+Project Other Metrics
+Do you have metrics that you would like to share with us, which help us to understand how successful your project is? (downloads, visits on website, registered users, etc.)
+
+https://hub.docker.com/v2/repositories/homeassistant/
+
+- There are around 50 contributor for every release.
+- Over 50 k installations are sharing details with us like the release or the operating system they use.
+- There are a little under 25 k users in the Community forum and they created 150 k postings in the last year.
+- The Docker images was pulled over 15 million times.
+- We have over 20 million unique pages views for the documentation over the last 12 months.
+- and we have over 8 k followers on Twitter ;-)
+
+Project Community Roles
+Does your project have a non-coder community e.g. UX designer, translator, marketing, etc.? What kind of non-coder people are involved in your project?
+
+Yes, it does but unfortunately it's not as big and diverse as we would like it to be.
+
+There are teachers, physicians, doctors, house wives and school kids who are helping to make Home Assistant better by doing translations, writing documentation, making icons, creating projects, bringing uses cases to the table or answering questions. Home Assistant is in the lucky position to attract people which different educations and jobs through the whole society. 
+
+
+Project Business Case
+Please describe the business case of your project.
+
+Home Assistant solves the issue of having silos in your home. Instead of having multiple "apps" on a smart phone to control the devices from various vendors in your home. The lights, media players, blinds, heating and all other supported devices can be controlled from a modern and fast web interface. The "smart things" or Internet-of-Things (IoT) devices are no longer isolated as Home Assistant and it's automation engine is technology agnostic, vendor agnostic and Open Source. The devices can interact with each other no matter of their brand or supported protocol and limitations defined by the manufacturers can be overcome.
+
+With its wide range of device support is Home Assistant the best choice for future-proof smart home installation. Without manufacturer cloud solutions involved your data will stay private and your home will work even if there is no internet connection. 
+
+Project Commercial Use
+How relevant is your project in regard to a commercial use?
+
+This is a pure non-profit project
+
+
+Project Importance
+This project is important to the world because....
+
+... it ensures that sensor and control data of your home stay private.
+... there is no remote access allowed by default and no internet connection needed after the installation to automate your home.
+... it gives you back the control without depending on vendors and third-party providers and removes the requirement to buy all hardware from the same vendor.
+... the users shouldn't need to care about protocols and vendor limitations. 
+... it makes your home automation installation sustainable, future-proof and easy to extend.
+
+
+Project Stop Impact
+If this project stops its development and ceases to exist, this would be the impact...
+
+The current state of the project can be described as "stable and mature". All core elements of the project have proven to work well under different conditions. This means that existing installations would continue to work. Over time the amount of working integrations would decrease as API changes and other modifications wouldn't be available and render certain devices useless. 
+
+As of today, it's highly unlikely that the development of project stops. There is a lot of momentum in the community and for the development, even more than in the previous years. Also, the project is using popular tools and languages which are broadly supported across the whole Open Source ecosystem.
+
+ 
