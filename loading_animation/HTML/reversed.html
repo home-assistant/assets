@@ -1,0 +1,240 @@
+<html>
+<head>
+  <title>Home Assistant Loading Animation</title>
+  <style type="text/css">
+    /*eg*/
+    body {
+      background-color: #fff;
+    }
+
+    svg {
+      width: 66vw;
+      height: 66vh;
+      margin-left: 16.666vw;
+      margin-top: 16.666vh;
+    }
+
+    /*main-logo*/
+    .ha-logo {
+      background-color: #fff;
+    }
+    .ha-logo path,
+    .ha-logo .house,
+    .ha-logo g > circle {
+      fill: none;
+      stroke: #038fc7;
+      stroke-width: 0.13px;
+      stroke-dasharray: 10 0;
+    }
+    .ha-logo path.house,
+    .ha-logo .house.house,
+    .ha-logo g > circle.house {
+      stroke-width: 0.25px;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    @keyframes house {
+      0% {
+        stroke-dasharray: 50 50;
+        stroke-dashoffset: -50;
+      }
+      15% {
+        fill: #fff;
+      }
+      25% {
+        fill: #038fc7;
+      }
+      45% {
+        stroke-dashoffset: -100;
+      }
+      80% {
+        stroke-dashoffset: -100;
+      }
+      73% {
+        fill: #038fc7;
+      }
+      76% {
+        fill: #fff;
+      }
+      100% {
+        stroke-dashoffset: -130;
+        stroke-dasharray: 50 50;
+      }
+    }
+    @keyframes circut {
+      0% {
+        stroke: #038fc7;
+        stroke-dasharray: 20 20;
+        stroke-dashoffset: -20;
+      }
+      10% {
+        stroke: #038fc7;
+      }
+      15% {
+        stroke: #fff;
+        stroke-dashoffset: -20;
+      }
+      50% {
+        stroke: #fff;
+        stroke-dashoffset: -40;
+      }
+      70% {
+        stroke: #fff;
+      }
+      80% {
+        stroke: #038fc7;
+      }
+      85% {
+        stroke-dashoffset: -40;
+      }
+      100% {
+        stroke-dashoffset: -60;
+        stroke-dasharray: 20 20;
+      }
+    }
+    .ha-logo circle {
+      animation: nodes 5s linear infinite;
+    }
+
+    .ha-logo .house {
+      animation: house 5s ease infinite;
+    }
+
+    .ha-logo .circut {
+      stroke-width: .176px;
+      animation: circut 5s cubic-bezier(0.7, 0.1, 0.1, 0.9) infinite;
+    }
+
+    @keyframes nodes {
+      0% {
+        stroke: #fff;
+        stroke-dasharray: 0 4;
+      }
+      25% {
+        stroke-dasharray: 0 4;
+      }
+      40% {
+        stroke: #fff;
+        stroke-dasharray: 4 0;
+      }
+      41% {
+        fill: none;
+      }
+      42% {
+        fill: #fff;
+      }
+      55% {
+        stroke: #fff;
+        fill: none;
+      }
+      65% {
+        fill: #038fc7;
+      }
+      75% {
+        fill: none;
+        stroke-dasharray: 4 0;
+      }
+      83% {
+        stroke: #fff;
+      }
+      85% {
+        stroke: #038fc7;
+        fill: #038fc7;
+        stroke-width: .15px;
+      }
+      93% {
+        fill: none;
+        stroke-dasharray: 4 0;
+      }
+      100% {
+        stroke-dashoffset: 2;
+        stroke-dasharray: 0 4;
+      }
+    }
+    g circle:nth-child(1n) {
+      animation-delay: -0.045s;
+    }
+
+    g circle:nth-child(2n) {
+      animation-delay: -0.09s;
+    }
+
+    g circle:nth-child(3n) {
+      animation-delay: -0.135s;
+    }
+
+    g circle:nth-child(4n) {
+      animation-delay: -0.18s;
+    }
+
+    g circle:nth-child(5n) {
+      animation-delay: -0.225s;
+    }
+
+    g circle:nth-child(6n) {
+      animation-delay: -0.27s;
+    }
+
+    g circle:nth-child(7n) {
+      animation-delay: -0.315s;
+    }
+
+    g circle:nth-child(8n) {
+      animation-delay: -0.36s;
+    }
+
+    g circle:nth-child(9n) {
+      animation-delay: -0.405s;
+    }
+
+    g circle:nth-child(10n) {
+      animation-delay: -0.45s;
+    }
+
+    g circle:nth-child(11n) {
+      animation-delay: -0.495s;
+    }
+
+    g circle:nth-child(12n) {
+      animation-delay: -0.54s;
+    }
+
+    g circle:nth-child(13n) {
+      animation-delay: -0.585s;
+    }
+
+    g circle:nth-child(14n) {
+      animation-delay: -0.63s;
+    }
+
+  </style>
+</head>
+<body>
+  <svg class="ha-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+    <path
+       class="house"
+       d="m 1.9,8.5 0,-3.2 -1,0 4,-4.3 2.2,2.1 0,-0.6 1,0 0,1.7 1,1.1 -1.2,0 0,3.2 z"   />
+
+    <path
+       class="circut"
+       d="M 5,8.7 5,4 M 5,7.5 6.6,5.9 6.6,4.3 M 5,6.3 3.5,4.9 3.5,4.3 M 6.2,5 6.6,5.4 7,5 m -1.1,1.1 0,0.5 0.5,0 M 4.2,5 l 0,0.5 -0.9,0 m 1.1,1.5 0,0.6 -0.6,0 M 5,8.4 3.6,6.7 M 5,8.4 6,7.5 6.7,7.5 M 4.6,3.6 5,4 5.4,3.6" />
+    <g>
+      <circle cx="5.5" cy="3.4" r="0.21" />
+      <circle cx="4.5" cy="3.4" r="0.21" />
+      <circle cx="6.6" cy="4.1" r="0.21" />
+      <circle cx="3.5" cy="4.1" r="0.21" />
+      <circle cx="4.2" cy="4.8" r="0.21" />
+      <circle cx="6.1" cy="4.8" r="0.21" />
+      <circle cx="7.1" cy="4.8" r="0.21" />
+      <circle cx="6.6" cy="6.6" r="0.21" />
+      <circle cx="5.9" cy="5.9" r="0.21" />
+      <circle cx="3.2" cy="5.5" r="0.21" />
+      <circle cx="3.5" cy="6.5" r="0.21" />
+      <circle cx="4.4" cy="6.8" r="0.21" />
+      <circle cx="3.6" cy="7.6" r="0.21" />
+      <circle cx="6.9" cy="7.5" r="0.21" />
+    </g>
+  </svg>
+</body>
+</html>
