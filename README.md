@@ -3,6 +3,3 @@
 # Home Assistant Assets
 
 This respository contains the Home Assistant Assets like logos, stickers, templates, etc.
-
-Also, we store the documents of past talks and workshops here.
-
