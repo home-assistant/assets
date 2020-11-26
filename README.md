@@ -3,3 +3,9 @@
 # Home Assistant Assets
 
 This respository contains the Home Assistant Assets like logos, stickers, templates, etc.
+
+ - [Logo](/logo)
+ - [Screenshots](/screenshots)
+ - [Assets for presentations](/presentations)
+ - [Stickers](/stickers)
+ - [T-shirts](/t-shirt)
