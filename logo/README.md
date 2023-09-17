@@ -5,3 +5,6 @@ As a community, we are proud of our logo. Follow our [design website guidelines]
 
 ## Download
 home-assistant-logo.zip contains all variations of our logo, including icon and wordmark.
+
+## Copyright notice
+Please note that this logo is not released under the CC license. All rights reserved.
